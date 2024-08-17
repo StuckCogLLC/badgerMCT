@@ -35,7 +35,7 @@ function badger_page() {
         'badgerMCT',
         'moderate_comments',
         'badgerMCT',
-        'badgerMCT',
+        'badgermct',
         plugin_dir_url(__FILE__) . 'images/icon_wporg.png',
         20
     );
