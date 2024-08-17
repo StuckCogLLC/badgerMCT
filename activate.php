@@ -1,4 +1,5 @@
 <?php
+register_activation_hook( __FILE__, 'create_tables' );
 function create_tables() {
     global $wpdb;
     $charset_collate = $wpdb->get_charset_collate();
@@ -15,7 +16,4 @@ function create_tables() {
     require_once ABSPATH . 'wp-admin/includes/upgrade.php';
     dbDelta( $table1 );
 }
-
-register_activation_hook( __FILE__, 'create_tables' );
-
 ?>
