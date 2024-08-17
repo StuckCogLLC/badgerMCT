@@ -54,5 +54,5 @@ function badgermct_cultures() {
 }
 
 add_action( 'admin_menu', 'badgermct_dashboard' );
-
+add_action('admin_menu', 'badgermct_cultures');
 ?>
