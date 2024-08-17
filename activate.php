@@ -11,7 +11,7 @@ function create_tables() {
         PRIMARY KEY(shop_lot_num))";
     
     if ($wpdb->query($table1) === TRUE) {
-        echo "table created"
+        echo "table created";
     } else {
         echo "error: " . $wpdb->error;
     }
