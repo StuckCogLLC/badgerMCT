@@ -1,5 +1,5 @@
 # badger
-badger is a wp plugin for tracking life cycle of mushrooms
+badgerMCT is a wp plugin for tracking life cycle of mushrooms
 
 # features
 - cluture tracking
