@@ -34,7 +34,7 @@ function badgermct_cultures_page() {
     ?>
     <div class="wrap">
         <h1>
-            <?php echo esc_html( get_admin_page_titiel() ); ?>
+            <?php echo esc_html( get_admin_page_title() ); ?>
         </h1>
         <p>This is just place holder text</p>
     </div>
