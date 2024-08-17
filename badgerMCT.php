@@ -61,7 +61,7 @@ function badgermct_cultures() {
         'Mange Cultures',
         'moderate_comments',
         'badgermct_cultures',
-        'badger_main',
+        'badgermct_cultures_page',
         1
     );
 }
