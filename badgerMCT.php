@@ -41,6 +41,6 @@ function badgermtc_dashboard() {
     );
 }
 
-do_action( 'admin_menu', 'badgermtc_dashboard' );
+add_action( 'admin_menu', 'badgermtc_dashboard' );
 
 ?>
