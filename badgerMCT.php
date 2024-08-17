@@ -9,7 +9,7 @@
 * License URI: https://www.gnu.org/licenses/gpl-3.0.html
 */
 
-function wporg_options_page_html() {
+function badger_main() {
     ?>
     <div class="wrap">
       <h1><?php echo esc_html( get_admin_page_title() ); ?></h1>
@@ -28,14 +28,14 @@ function wporg_options_page_html() {
     <?php
 }
 
-add_action( 'admin_menu', 'wporg_options_page' );
-function wporg_options_page() {
+add_action( 'admin_menu', 'badger_main' );
+function badger_page() {
     add_menu_page(
         'badgerMCT',
         'badgerMCT',
         'moderate_comments',
         'badgerMCT',
-        'wporg_options_page_html',
+        'badgerMCT',
         plugin_dir_url(__FILE__) . 'images/icon_wporg.png',
         20
     );
