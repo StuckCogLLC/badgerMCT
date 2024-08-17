@@ -28,7 +28,7 @@ function badger_main() {
     <?php
 }
 
-add_action( 'admin_menu', 'badger_main' );
+add_action( 'admin_menu', 'badgermtc_dashboard' );
 function badger_page() {
     add_menu_page(
         'badgerMCT',
