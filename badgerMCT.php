@@ -50,7 +50,7 @@ function badgermct_cultures() {
         'badgermct_cultures',
         'badger_main',
         1
-    )
+    );
 }
 
 add_action( 'admin_menu', 'badgermct_dashboard' );
