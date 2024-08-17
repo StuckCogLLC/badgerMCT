@@ -34,8 +34,8 @@ function wporg_options_page() {
         'badgerMCT',
         'badgerMCT',
         'moderate_comments',
-        plugin_dir_path(__FILE__) . 'admin/view.php',
-        null,
+        'badgerMCT',
+        'wporg_options_page_html',
         plugin_dir_url(__FILE__) . 'images/icon_wporg.png',
         20
     );
