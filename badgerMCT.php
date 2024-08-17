@@ -28,7 +28,7 @@ function badger_main() {
     <?php
 }
 
-function badgermtc_dashboard() {
+function badgermct_dashboard() {
     add_menu_page(
         'badgerMCT',
         'badgerMCT',
@@ -41,6 +41,18 @@ function badgermtc_dashboard() {
     );
 }
 
-add_action( 'admin_menu', 'badgermtc_dashboard' );
+function badgermct_cultures() {
+    add_submenu_page(
+        'badgermct',
+        'Mange Cultures',
+        'Mange Cultures',
+        'moderate_comments',
+        'badgermct_cultures',
+        'badger_main',
+        1
+    )
+}
+
+add_action( 'admin_menu', 'badgermct_dashboard' );
 
 ?>
