@@ -17,3 +17,5 @@ function create_tables() {
 }
 
 register_activation_hook( __FILE__, 'create_tables' );
+
+?>
