@@ -28,7 +28,6 @@ function badger_main() {
     <?php
 }
 
-do_action( 'admin_menu', 'badgermtc_dashboard' );
 function badgermtc_dashboard() {
     add_menu_page(
         'badgerMCT',
@@ -36,8 +35,12 @@ function badgermtc_dashboard() {
         'moderate_comments',
         'badgermct',
         'badger_main',
-        plugin_dir_url(__FILE__) . 'images/icon_wporg.png',
+        '',
+        //plugin_dir_url(__FILE__) . 'images/icon_wporg.png',
         20
     );
 }
+
+do_action( 'admin_menu', 'badgermtc_dashboard' );
+
 ?>
