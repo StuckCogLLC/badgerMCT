@@ -12,7 +12,7 @@ function create_tables() {
         PRIMARY KEY(shop_lot_num)
         ) $charset_collate;";
     
-    require_once ( ABSPATH . 'wp-admin/includes/upgrade.php');
+    require_once ABSPATH . 'wp-admin/includes/upgrade.php';
     dbDelta( $table1 );
 }
 
