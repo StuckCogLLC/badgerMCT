@@ -9,7 +9,7 @@
 * License URI: https://www.gnu.org/licenses/gpl-3.0.html
 */
 
-function badger_main() {
+function badgermct_dashboard_page() {
     ?>
     <div class="wrap">
         <h1>
@@ -47,7 +47,7 @@ function badgermct_dashboard() {
         'badgerMCT',
         'moderate_comments',
         'badgermct',
-        'badger_main',
+        'badgermct_dashboard_page',
         '',
         //plugin_dir_url(__FILE__) . 'images/icon_wporg.png',
         20
