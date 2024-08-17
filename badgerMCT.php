@@ -28,8 +28,8 @@ function badger_main() {
     <?php
 }
 
-add_action( 'admin_menu', 'badgermtc_dashboard' );
-function badger_page() {
+do_action( 'admin_menu', 'badgermtc_dashboard' );
+function badgermtc_dashboard() {
     add_menu_page(
         'badgerMCT',
         'badgerMCT',
