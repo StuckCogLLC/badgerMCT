@@ -9,6 +9,8 @@
 * License URI: https://www.gnu.org/licenses/gpl-3.0.html
 */
 
+global $wpdb;
+
 if ( ! defined( 'ABSPATH') ) {
     exit;
 }
