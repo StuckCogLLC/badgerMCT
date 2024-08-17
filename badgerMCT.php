@@ -30,8 +30,8 @@ function badger_main() {
 
 function badgermct_dashboard() {
     add_menu_page(
-        'badgerMCT',
         'badgerMCT Dashboard',
+        'badgerMCT',
         'moderate_comments',
         'badgermct',
         'badger_main',
