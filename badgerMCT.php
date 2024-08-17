@@ -31,11 +31,11 @@ function wporg_options_page_html() {
 add_action( 'admin_menu', 'wporg_options_page' );
 function wporg_options_page() {
     add_menu_page(
-        'WPOrg',
-        'WPOrg Options',
-        'manage_options',
-        'wporg',
-        'wporg_options_page_html',
+        'badgerMCT',
+        'badgerMCT',
+        'moderate_comments',
+        plugin_dir_path(__FILE__) . 'admin/view.php',
+        null,
         plugin_dir_url(__FILE__) . 'images/icon_wporg.png',
         20
     );
