@@ -10,11 +10,8 @@ function create_tables() {
         ven_lot_num CHAR(20),
         PRIMARY KEY(shop_lot_num))";
     
-    if ($wpdb->query($table1) === TRUE) {
-        echo "table created";
-    } else {
-        echo "error: " . $wpdb->error;
-    }
+    require_once ( ABSPATH . 'wp-admin/includes/upgrade.php');
+    dbDelta( $table1 );
 }
 
 register_activation_hook( __FILE__, 'create_tables' );
