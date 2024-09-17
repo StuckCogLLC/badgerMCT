@@ -60,7 +60,7 @@ function create_tables() {
 
     
     require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
-    $build_tables = array( $table1, $table2, $table3, $table4 );
+    $build_tables = [$table1, $table2, $table3, $table4];
     dbDelta( $build_tables );
 }
 register_activation_hook( __FILE__, 'create_tables' );
