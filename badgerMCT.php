@@ -38,7 +38,8 @@ function create_tables() {
     ) $charset_collate;";
     
     require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
-    dbDelta( ($table1,$table2) );
+    $build_tables = array( $table1, $table2 );
+    dbDelta( $build_tables );
 }
 register_activation_hook( __FILE__, 'create_tables' );
 
