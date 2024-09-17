@@ -26,10 +26,19 @@ function create_tables() {
         vendor CHAR(50),
         ven_lot_num CHAR(20),
         PRIMARY KEY(shop_lot_num)
-        ) $charset_collate;";
+    ) $charset_collate;";
+    
+    $table2 = "CREATE TABLE badgerMCT_grain (
+        grain_num INT(10) AUTO_INCREMENT,
+        shop_lot_num INT(6),
+        mush_type CHAR(50),
+        inoc_date DATE,
+        grain_type CHAR(20),
+        PRIMARY KEY(grain_num)
+    ) $charset_collate;";
     
     require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
-    dbDelta( $table1 );
+    dbDelta( $table1,$table2 );
 }
 register_activation_hook( __FILE__, 'create_tables' );
 
