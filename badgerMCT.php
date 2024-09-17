@@ -28,7 +28,7 @@ function create_tables() {
         PRIMARY KEY(shop_lot_num)
     ) $charset_collate;";
     
-    $table2 = "CREATE TABLE badgerMCT_grain (
+    $table2 = "CREATE TABLE IF NOT EXISTS badgerMCT_grain (
         grain_num INT(10) AUTO_INCREMENT,
         shop_lot_num INT(6),
         mush_type CHAR(50),
@@ -36,9 +36,31 @@ function create_tables() {
         grain_type CHAR(20),
         PRIMARY KEY(grain_num)
     ) $charset_collate;";
+
+    $table3 = "CREATE TABLE IF NOT EXISTS badgerMCT_substrate (
+        sub_lot_num INT(6) AUTO_INCREMENT,
+        shop_lot_num INT(6),
+        mush_type CHAR(50),
+        grain_num INT(10),
+        inoc_date DATE,
+        fruit_date DATE,
+        block_weight int(4),
+        PRIMARY KEY(sub_lot_num)
+    ) $charset_collate;";
+
+    $table4 = "CREATE TABLE IF NOT EXISTS badgerMCT_harvest (
+        harvest_num INT(10) AUTO_INCREMENT,
+        sub_lot_num INT(6),
+        mush_type CHAR(50),
+        harvest_date DATE,
+        harvest_weight INT(4),
+        waste_weight INT(4),
+        PRIMARY KEY(harvest_num)
+    ) $charset_collate;";
+
     
     require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
-    $build_tables = array( $table1, $table2 );
+    $build_tables = array( $table1, $table2, $table3, $table4 );
     dbDelta( $build_tables );
 }
 register_activation_hook( __FILE__, 'create_tables' );
