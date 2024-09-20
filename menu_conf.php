@@ -1,16 +1,9 @@
 <?php
 // menu page call
 function badgermct_dashboard() {
-    add_menu_page(
-        'badgerMCT Dashboard',
-        'badgerMCT',
-        'moderate_comments',
-        'badgermct',
-        'badgermct_dashboard_page',
-        '',
-        //plugin_dir_url(__FILE__) . 'images/icon_wporg.png',
-        20
-    );
+?>
+<p>This is a text place holder</p>
+<?php
 }
 
 function badgermct_cultures() {
