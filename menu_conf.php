@@ -15,7 +15,7 @@ function badgermct_dashboard() {
 
 function badgermct_cultures() {
     add_submenu_page(
-        'badgermct',
+        'badgermct_dashboard',
         'Mange Cultures',
         'Mange Cultures',
         'moderate_comments',
