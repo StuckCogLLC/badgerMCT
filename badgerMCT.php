@@ -63,7 +63,7 @@ function create_tables() {
     dbDelta( $tbl_badgerMCT_cultures );
     dbDelta( $tbl_badgerMCT_grain );
     dbDelta( $tbl_badgerMCT_substrate );
-    dbDelta( $badgerMCT_harvest );
+    dbDelta( $tbl_badgerMCT_harvest );
 }
 register_activation_hook( __FILE__, 'create_tables' );
 
