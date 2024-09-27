@@ -27,7 +27,7 @@ function badgermct_cultures() {
 
 // menu pages
 function badgermct_dashboard_page() {
-    include 'menu_conf.php';
+    include 'dashboard.php';
 }
 
 function badgermct_cultures_page() {
