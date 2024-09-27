@@ -8,6 +8,6 @@
             Date Received: <input type="date" name="received_date"><br><br>
             Vendor: <input type="text" name="vendor"><br><br>
             Vendor Lot Number: <input type="text" name="ven_lot_num"><br><br>
-            <input type="submit" value="Submit" name="submit">
+            <input type="submit" value="Add" name="add">
     </form>
     </div>
