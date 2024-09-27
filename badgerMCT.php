@@ -19,7 +19,7 @@ function create_tables() {
     global $wpdb;
     $charset_collate = $wpdb->get_charset_collate();
 
-    $table1 = "CREATE TABLE IF NOT EXISTS badgerMCT_cultures (
+    $tbl_badgerMCT_cultures = "CREATE TABLE IF NOT EXISTS badgerMCT_cultures (
         shop_lot_num INT(6) AUTO_INCREMENT,
         mush_type CHAR(50),
         received_date DATE,
@@ -28,7 +28,7 @@ function create_tables() {
         PRIMARY KEY(shop_lot_num)
     ) $charset_collate;";
     
-    $table2 = "CREATE TABLE IF NOT EXISTS badgerMCT_grain (
+    $tbl_badgerMCT_grain = "CREATE TABLE IF NOT EXISTS badgerMCT_grain (
         grain_num INT(10) AUTO_INCREMENT,
         shop_lot_num INT(6),
         mush_type CHAR(50),
@@ -37,7 +37,7 @@ function create_tables() {
         PRIMARY KEY(grain_num)
     ) $charset_collate;";
 
-    $table3 = "CREATE TABLE IF NOT EXISTS badgerMCT_substrate (
+    $tbl_badgerMCT_substrate = "CREATE TABLE IF NOT EXISTS badgerMCT_substrate (
         sub_lot_num INT(6) AUTO_INCREMENT,
         shop_lot_num INT(6),
         mush_type CHAR(50),
@@ -48,7 +48,7 @@ function create_tables() {
         PRIMARY KEY(sub_lot_num)
     ) $charset_collate;";
 
-    $table4 = "CREATE TABLE IF NOT EXISTS badgerMCT_harvest (
+    $tbl_badgerMCT_harvest = "CREATE TABLE IF NOT EXISTS badgerMCT_harvest (
         harvest_num INT(10) AUTO_INCREMENT,
         sub_lot_num INT(6),
         mush_type CHAR(50),
@@ -60,11 +60,10 @@ function create_tables() {
 
     
     require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
-    #$build_tables = [$table1, $table2, $table3, $table4];
-    dbDelta( $table1 );
-    dbDelta( $table2 );
-    dbDelta( $table3 );
-    dbDelta( $table4 );
+    dbDelta( $tbl_badgerMCT_cultures );
+    dbDelta( $tbl_badgerMCT_grain );
+    dbDelta( $tbl_badgerMCT_substrate );
+    dbDelta( $badgerMCT_harvest );
 }
 register_activation_hook( __FILE__, 'create_tables' );
 
