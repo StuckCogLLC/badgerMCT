@@ -27,11 +27,7 @@ function badgermct_cultures() {
 
 // menu pages
 function badgermct_dashboard_page() {
-    ?>
-    <div class="wrap">
-        <p>Place holder for Dashboard</p>
-    </div>
-    <?php
+    include 'menu_conf.php';
 }
 
 function badgermct_cultures_page() {
