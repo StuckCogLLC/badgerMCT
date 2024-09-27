@@ -3,13 +3,13 @@
 function badgermct_dashboard() {
     add_menu_page(
         'badgerMCT Dashboard',
-        'badgerMCT',
+        'Dashboard',
         'moderate_comments',
-        'badgermct',
+        'badgermct_dashboard',
         'badgermct_dashboard_page',
         '',
         //plugin_dir_url(__FILE__) . 'images/icon_wporg.png',
-        20
+        81
     );
 }
 
