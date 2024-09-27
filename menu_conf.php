@@ -3,7 +3,7 @@
 function badgermct_dashboard() {
     add_menu_page(
         'badgerMCT Dashboard',
-        'Dashboard',
+        'BadgerMCT',
         'moderate_comments',
         'badgermct_dashboard',
         'badgermct_dashboard_page',
