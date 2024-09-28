@@ -2,7 +2,7 @@
 if(isset($_POST['submit'])){
     if($_POST['mush_type'] != ''&& $_POST['received_date'] != ''){
         $wpdb->insert(
-            'badgerMCT',
+            'badgerMCT_cultures',
             array(
                 'mush_type' = >$_POST['mush_type'],
                 'received_date' => $_POST['received_date'],
