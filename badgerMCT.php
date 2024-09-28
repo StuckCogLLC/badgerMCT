@@ -22,7 +22,7 @@ function create_tables() {
     $tbl_badgerMCT_cultures = "CREATE TABLE IF NOT EXISTS badgerMCT_cultures (
         shop_lot_num INT(6) AUTO_INCREMENT,
         mush_type CHAR(50),
-        received_date DATE,
+        received_date CHAR(10),
         vendor CHAR(50),
         ven_lot_num CHAR(20),
         PRIMARY KEY(shop_lot_num)
