@@ -1,5 +1,5 @@
 <?php
-global $wpdb;
+
 
 
 if(isset($_POST['add'])){
@@ -14,7 +14,7 @@ if(isset($_POST['add'])){
         'vendor' => 'MycoLabs',
         'ven_lot_num' => 'ml-123123123',
     );
-
+    global $wpdb;
     $wpdb->insert( 'badgerMCT_cultures', $data );
     #header("Location:https://www.stuckcogllc.com/wp-admin/admin.php?page=badgermct_cultures");
 }
