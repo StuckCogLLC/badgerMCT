@@ -8,11 +8,16 @@ if(isset($_POST['add'])){
     echo $_POST['vendor'];
     echo $_POST['ven_lot_num'];
 
+    $mush_type = $_POST['mush_type'];
+    $received_date = $_POST['received_date'];
+    $vendor = $_POST['vendor'];
+    $ven_lot_num = $_POST['ven_lot_num'];
+
     $data = array(
         'mush_type' => 'somemush',
         'received_date' => '10/10/1010',
         'vendor' => 'MycoLabs',
-        'ven_lot_num' => 'ml-123123123',
+        'ven_lot_num' => 'ml-123123123'
     );
     global $wpdb;
     $wpdb->insert( 'badgerMCT_cultures', $data );
