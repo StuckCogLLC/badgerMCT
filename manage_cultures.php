@@ -2,7 +2,7 @@
         <h1>
             <?php echo esc_html( get_admin_page_title() ); ?>
         </h1>
-        <div>
+        <div width="25%">
             <div title="Add Culture">
                     <h2>Add Culture</h2>
                     <br>
