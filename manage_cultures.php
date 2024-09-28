@@ -4,41 +4,43 @@
     </h1>
 
 <?php
-// Need to put into function for page
-
-function insert_data($table, $data) {
-    global $wpdb;
-    $wpdb->insert($table, $data);
-}
-
-if(isset($_POST['culture_insert'])){
-    
-    $table = 'badgerMCT_cultures';
-    $mush_type = $_POST['mush_type'];
-    $received_date = $_POST['received_date'];
-    $vendor = $_POST['vendor'];
-    $ven_lot_num = $_POST['ven_lot_num'];
-
-    $data = array(
-        'shop_lot_num' => NULL,
-        'mush_type' => $mush_type,
-        'received_date' => $received_date,
-        'vendor' => $vendor,
-        'ven_lot_num' => $ven_lot_num
-    );
-    
-    insert_data($table, $data);
-
-    #header("Location:https://www.stuckcogllc.com/wp-admin/admin.php?page=badgermct_cultures");
-    if ($wpdb->last_error) {
-        echo "wpdb Error: " . $wpdb->last_error;
+// php functions
+    function insert_culture($table, $data) {
+        global $wpdb;
+        $wpdb->insert($table, $data);
     }
-}
+    function query_cluture() {
+        global $wpdb;
+        $query = $wpdb->get_results(
+            "SELECT * FROM $wpdb->badgerMCT_cultures"
+        );
+        return $query;
+    }
+// insert data into db if present
+    if(isset($_POST['culture_insert'])){
+        
+        $table = 'badgerMCT_cultures';
+        $mush_type = $_POST['mush_type'];
+        $received_date = $_POST['received_date'];
+        $vendor = $_POST['vendor'];
+        $ven_lot_num = $_POST['ven_lot_num'];
 
+        $data = array(
+            'shop_lot_num' => NULL,
+            'mush_type' => $mush_type,
+            'received_date' => $received_date,
+            'vendor' => $vendor,
+            'ven_lot_num' => $ven_lot_num
+        );
+        
+        insert_culture($table, $data);
 
+        if ($wpdb->last_error) {
+            echo "wpdb Error: " . $wpdb->last_error;
+        }
+    }
 ?>
-
-
+<!-- Start Add Culture form -->
 <form action="https://www.stuckcogllc.com/wp-admin/admin.php?page=badgermct_cultures" method="post">
         <h2>Add a culture</h2>
         <table class="form-table" role="presentation">
@@ -80,3 +82,6 @@ if(isset($_POST['culture_insert'])){
         <input type="submit" value="Add" name="culture_insert">
     </form>
 </div>
+
+<?php
+    echo query_cluture();
