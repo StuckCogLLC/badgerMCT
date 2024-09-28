@@ -86,7 +86,15 @@
 </div>
 
 <?php
-    $query_culture_results = query_cultures();
+
+    $query = $wpdb->query(
+        $wpdb->prepare(
+            "SELECT * FROM $wpdb->wp_posts"
+        )
+    );
+    echo $query;
+
+/*    $query_culture_results = query_cultures();
     if ( $query_culture_results->num_rows > 0 ) {
         while( $row = $query_culture_results->fetch_assoc()) {
             echo "Lot Number: " . $row["shop_lot_num"] . " - Type: " . $row["mush_type"] . " - Date: " . $row["received_date"] . " - Vendor: " . $row["vendor"] . " - Vendor Lot: " . $row["ven_lot_num"] . "<br>";
@@ -94,4 +102,5 @@
     } else {
             echo "0 results";
     }
+            */
 ?>
