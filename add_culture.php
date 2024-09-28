@@ -1,4 +1,7 @@
 <?php
+
+echo $_POST['mush_type'];
+
 if(isset($_POST['submit'])){
     $wpdb->insert(
         'badgerMCT_cultures',
@@ -9,6 +12,6 @@ if(isset($_POST['submit'])){
             'ven_lot_num' => $_POST['ven_lot_num'],
         ),
     );
-    header("Location:https://www.stuckcogllc.com/wp-admin/admin.php?page=badgermct_cultures");
+    #header("Location:https://www.stuckcogllc.com/wp-admin/admin.php?page=badgermct_cultures");
 }
 ?>
