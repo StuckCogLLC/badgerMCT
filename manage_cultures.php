@@ -6,15 +6,7 @@
         <h2>Add a culture</h2>
         <table class="form-table" role="presentation">
             <tbody>
-                <tr>
-                    <th>
-                        Shop Lot Number:
-                    </th>
-                    <th>
-                        <input type="int" name="shop_lot_num">
-                    </th>
-                </tr>
-                <tr>
+                <tr name="Mushroom Strain">
                     <th>
                         Mushroom Strain:
                     </th>

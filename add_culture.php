@@ -1,0 +1,10 @@
+<?php
+$wpdb->insert(
+    'badgerMCT',
+    array(
+        'mush_type'
+        'received_date'
+        'vendor'
+        'ven_lot_num'
+    )
+)
