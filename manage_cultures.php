@@ -14,7 +14,7 @@
                         <input type="text" name="mush_type">
                     </th>
                 </tr>
-                <tr>
+                <tr name="Date Reveived">
                     <th>
                         Date Received:
                     </th>
@@ -22,7 +22,7 @@
                         <input type="date" name="received_date">
                     </th>
                 </tr>
-                <tr>
+                <tr name="Vendor">
                     <th>
                         Vendor:
                     </th>
@@ -30,7 +30,7 @@
                         <input type="text" name="vendor">
                     </th>
                 </tr>
-                <tr>
+                <tr name="Vendor Lot Number">
                     <th>
                         Vendor Lot Number:
                     </th>
