@@ -1,6 +1,6 @@
 <?php
 
-
+global $wpdb;
 
 if(isset($_POST['add'])){
     echo $_POST['mush_type'];
