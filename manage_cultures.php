@@ -89,7 +89,7 @@
 
     $query = $wpdb->query(
         $wpdb->prepare(
-            "SELECT * FROM $wpdb->wp_posts"
+            "SELECT * FROM badgerMCT_cultures"
         )
     );
     echo $query;
