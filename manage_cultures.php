@@ -12,7 +12,7 @@
     function query_cultures() {
         global $wpdb;
         $query = $wpdb->get_results(
-            "SELECT * FROM $wpdb->prefix . 'posts'"
+            "SELECT * FROM $wpdb->wp_posts"
         );
         return $query;
     }
