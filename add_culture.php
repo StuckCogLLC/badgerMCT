@@ -8,12 +8,6 @@ if(isset($_POST['submit'])){
             'vendor' => $_POST['vendor'],
             'ven_lot_num' => $_POST['ven_lot_num'],
         ),
-        array(
-            '%s',
-            '%s',
-            '%s',
-            '%s',
-        )
     );
     header("Location:https://www.stuckcogllc.com/wp-admin/admin.php?page=badgermct_cultures");
 }
