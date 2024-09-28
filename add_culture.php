@@ -1,5 +1,5 @@
 <?php
-
+require_once ('../../../wp-config.php');
 global $wpdb;
 $table = 'badgerMCT_cultures';
 $mush_type = $_POST['mush_type'];
