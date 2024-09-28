@@ -4,7 +4,7 @@
     </h1>
     <form action="" method="post">
         <h2>Add a culture</h2>
-        <table class="form-table">
+        <table class="form-table" role="presentation">
             <tbody>
                 <tr>
                     <th>
