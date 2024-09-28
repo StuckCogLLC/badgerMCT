@@ -1,8 +1,13 @@
 <?php
 
-echo $_POST['mush_type'];
+
 
 if(isset($_POST['submit'])){
+    echo $_POST['mush_type'];
+    echo $_POST['received_date'];
+    echo $_POST['vendor'];
+    echo $_POST['ven_lot_num'];
+    
     $wpdb->insert(
         'badgerMCT_cultures',
         array(
