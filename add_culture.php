@@ -2,12 +2,12 @@
 
 
 
-if(isset($_POST['submit'])){
+if(isset($_POST['add'])){
     echo $_POST['mush_type'];
     echo $_POST['received_date'];
     echo $_POST['vendor'];
     echo $_POST['ven_lot_num'];
-    
+
     $wpdb->insert(
         'badgerMCT_cultures',
         array(
