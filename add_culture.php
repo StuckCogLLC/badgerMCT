@@ -14,6 +14,7 @@ if(isset($_POST['add'])){
     $ven_lot_num = $_POST['ven_lot_num'];
 
     $data = array(
+        'shop_lot_num' => NULL,
         'mush_type' => 'somemush',
         'received_date' => '10/10/1010',
         'vendor' => 'MycoLabs',
