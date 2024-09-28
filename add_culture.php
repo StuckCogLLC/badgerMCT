@@ -15,10 +15,7 @@ if(isset($_POST['add'])){
         'ven_lot_num' => 'ml-123123123',
     );
 
-    $wpdb->insert(
-        'badgerMCT_cultures',
-        $data
-    );
+    $wpdb->insert( 'badgerMCT_cultures', $data );
     #header("Location:https://www.stuckcogllc.com/wp-admin/admin.php?page=badgermct_cultures");
 }
 ?>
