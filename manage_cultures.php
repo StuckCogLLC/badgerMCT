@@ -3,7 +3,10 @@
             <?php echo esc_html( get_admin_page_title() ); ?>
         </h1>
         <div class="postbox">
-            <div title="Add Culture" class="handlediv"><br></div>
+            <div title="Add Culture" class="handlediv">
+                <h2>Add Culture"</h2>
+                <br>
+            </div>
             <form action="<?php menu_page_url( 'badgermct_cultures_page' ) ?>" method="POST">
                 Shop Lot Number: <input type="int" name="shop_lot_num"><br><br>
                 Mushroom Strain: <input type="text" name="mush_type"><br><br>
