@@ -88,12 +88,8 @@
 
 <?php
 
-    $query = $wpdb->query(
-        $wpdb->prepare(
-            "SELECT * FROM badgerMCT_cultures"
-        )
-    );
-    echo $query;
+    
+    echo $wpdb->query('SELECT * FROM wp_posts');
 
 /*    $query_culture_results = query_cultures();
     if ( $query_culture_results->num_rows > 0 ) {
