@@ -11,8 +11,10 @@
     }
     function query_cultures() {
         global $wpdb;
-        $query = $wpdb->get_results(
-            "SELECT * FROM $wpdb->wp_posts"
+        $query = $wpdb->query(
+            $wpdb->prepare(
+                "SELECT * FROM $wpdb->wp_posts"
+            )
         );
         return $query;
     }
