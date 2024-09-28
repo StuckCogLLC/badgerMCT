@@ -1,5 +1,5 @@
 <?php
-
+global $wpdb;
 
 
 if(isset($_POST['add'])){
