@@ -45,10 +45,8 @@
                         <input type="text" name="ven_lot_num">
                     </th>
                 </tr>
-                <tr>
-                    <input type="submit" value="Add" name="add">
-                </tr>
             </tbody>
         </table>
+        <input type="submit" value="Add" name="add">
     </form>
 </div>
