@@ -2,7 +2,7 @@
     <h1>
         <?php echo esc_html( get_admin_page_title() ); ?>
     </h1>
-    <form action="" method="post">
+    <form action="add_culture.php" method="post">
         <h2>Add a culture</h2>
         <table class="form-table" role="presentation">
             <tbody>
