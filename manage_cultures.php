@@ -39,7 +39,7 @@ if(isset($_POST['culture_insert'])){
 ?>
 
 
-<form action="<?php echo esc_url( plugin_dir_url(__FILE__) . 'add_culture.php' ); ?>" method="post">
+<form action="https://www.stuckcogllc.com/wp-admin/admin.php?page=badgermct_cultures" method="post">
         <h2>Add a culture</h2>
         <table class="form-table" role="presentation">
             <tbody>
