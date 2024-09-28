@@ -12,7 +12,7 @@
     function query_cultures() {
         global $wpdb;
         $query = $wpdb->get_results(
-            "SELECT * FROM $wpdb->badgerMCT_cultures"
+            "SELECT * FROM $wpdb->posts"
         );
         return $query;
     }
