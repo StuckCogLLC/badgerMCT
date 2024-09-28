@@ -17,9 +17,10 @@ if(isset($_POST['add'])){
     global $wpdb;
     $wpdb->insert( 'badgerMCT_cultures', $data );
     #header("Location:https://www.stuckcogllc.com/wp-admin/admin.php?page=badgermct_cultures");
+    if ($wpdb->last_error) {
+        echo "wpdb Error: " . $wpdb->last_error;
+    }
 }
 
-if ($wpdb->last_error) {
-    echo "wpdb Error: " . $wpdb->last_error;
-}
+
 ?>
