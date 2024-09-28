@@ -2,7 +2,7 @@
     <h1>
         <?php echo esc_html( get_admin_page_title() ); ?>
     </h1>
-    <form action="<?php plugin_dir_path(__FILE__) . add_culture.php; ?>" method="post">
+    <form action="<?php plugin_dir_path(__FILE__) . 'add_culture.php'; ?>" method="post">
         <h2>Add a culture</h2>
         <table class="form-table" role="presentation">
             <tbody>
