@@ -15,10 +15,10 @@ if(isset($_POST['add'])){
 
     $data = array(
         'shop_lot_num' => NULL,
-        'mush_type' => 'somemush',
-        'received_date' => '10/10/1010',
-        'vendor' => 'MycoLabs',
-        'ven_lot_num' => 'ml-123123123'
+        'mush_type' => $mush_type,
+        'received_date' => $received_date,
+        'vendor' => $vendor,
+        'ven_lot_num' => $ven_lot_num
     );
     global $wpdb;
     $wpdb->insert( 'badgerMCT_cultures', $data );
