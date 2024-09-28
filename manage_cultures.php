@@ -3,8 +3,8 @@
             <?php echo esc_html( get_admin_page_title() ); ?>
         </h1>
         <div class="postbox">
-            <div title="Add Culture" class="handlediv">
-                <h2>Add Culture"</h2>
+            <div title="Add Culture">
+                <h2>Add Culture</h2>
                 <br>
             </div>
             <form action="<?php menu_page_url( 'badgermct_cultures_page' ) ?>" method="POST">
