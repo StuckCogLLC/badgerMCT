@@ -84,12 +84,12 @@ global $wpdb;
 </div>
 
 <?php
-    echo "----------";
-    echo "Just the query: " . $wpdb->query("SELECT * FROM badgerMCT_cultures");
-    $somevar = $wpdb->query("SELECT * FROM badgerMCT_cultures");
-    echo "query to a var: " . $somevar[0];
-    echo "function return: " . query_cultures();
-    echo "----------";
+    echo "----------<br>";
+    echo "Just the query: " . $wpdb->query("SELECT * FROM badgerMCT_cultures") . "<br>";
+    $somevar = $wpdb->query("SELECT * FROM badgerMCT_cultures") . "<br>";
+    echo "query to a var: " . $somevar[0] . "<br>";
+    echo "function return: " . query_cultures() . "<br>";
+    echo "----------<br>";
 
     $query_culture_results = query_cultures();
     if ( $query_culture_results->num_rows > 0 ) {
