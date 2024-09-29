@@ -14,8 +14,7 @@ global $wpdb;
     function query_cultures() {
         global $wpdb;
         $sql_query = $wpdb->prepare( "SELECT * FROM badgerMCT_cultures" );
-        $returned_cultures = $wpdb->get_results($sql_query, OBJECT);
-        return $returned_cultures;
+        return $wpdb->get_results($sql_query, OBJECT);
     }
 // insert data into db if present
     if(isset($_POST['culture_insert'])){
