@@ -88,7 +88,7 @@ global $wpdb;
         <tbody>
             <?php
                 echo "<tr><th style=\"width:10%\">" . "Grain Lot" . 
-                    "<tr><th style=\"width:10%\">" . "Shop Lot" . 
+                    "</th><th style=\"width:10%\">" . "Shop Lot" . 
                     "</th><th style=\"width:10%\">" . "Mushroom" . 
                     "</th><th style=\"width:10%\">" . "Inoc Date" . 
                     "</th><th style=\"width:10%\">" . "grain_type" .
