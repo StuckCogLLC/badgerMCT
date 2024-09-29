@@ -83,7 +83,7 @@ global $wpdb;
     </form>
 </div>
 <div class="wrap">
-    <table class="form-table" role="presentation">
+    <table class="form-table">
         <?php
             echo "<tr><th>" . "Shop Lot" . 
                 "</th><th>" . "Mushroom" . 
