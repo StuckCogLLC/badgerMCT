@@ -79,29 +79,30 @@ global $wpdb;
                 </tr>
             </tbody>
         </table>
-        <input type="submit" value="Add" name="culture_insert">
+        <input type="submit" value="Add" name="culture_insert"><?php if(isset($_POST['culture_insert'])){ echo "Culture Added"; } ?>
     </form>
 </div>
+<!-- list cultures -->
 <div class="wrap">
     <table class="form-table">
         <tbody>
-        <?php
-            echo "<tr><th>" . "Shop Lot" . 
-                "</th><th>" . "Mushroom" . 
-                "</th><th>" . "Date" . 
-                "</th><th>" . "Vendor" . 
-                "</th><th>" . "Vendor Lot" . 
-                "</th></tr>";
-            $cultures = query_cultures();
-            foreach ($cultures as $row) {
-                echo "<tr><th>" . $row['shop_lot_num'] . 
-                    "</th><th>" . $row['mush_type'] . 
-                    "</th><th>" . $row['received_date'] . 
-                    "</th><th>" . $row['vendor'] . 
-                    "</th><th>" . $row['ven_lot_num'] . 
+            <?php
+                echo "<tr><th>" . "Shop Lot" . 
+                    "</th><th>" . "Mushroom" . 
+                    "</th><th>" . "Date" . 
+                    "</th><th>" . "Vendor" . 
+                    "</th><th>" . "Vendor Lot" . 
                     "</th></tr>";
-            }
-        ?>
+                $cultures = query_cultures();
+                foreach ($cultures as $row) {
+                    echo "<tr><th>" . $row['shop_lot_num'] . 
+                        "</th><th>" . $row['mush_type'] . 
+                        "</th><th>" . $row['received_date'] . 
+                        "</th><th>" . $row['vendor'] . 
+                        "</th><th>" . $row['ven_lot_num'] . 
+                        "</th></tr>";
+                }
+            ?>
         </tbody>
     </table>
 </div>
