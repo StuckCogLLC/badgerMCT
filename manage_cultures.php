@@ -87,7 +87,7 @@ global $wpdb;
     echo "----------<br>";
     echo "Just the query: " . $wpdb->get_results("SELECT * FROM badgerMCT_cultures") . "<br>";
     $somevar = $wpdb->get_results("SELECT * FROM badgerMCT_cultures") . "<br>";
-    echo "query to a var: " . $somevar[0] . "<br>";
+    echo "query to a var: " . $somevar . "<br>";
     echo "function return: " . query_cultures() . "<br>";
     echo "----------<br>";
 
