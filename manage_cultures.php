@@ -87,25 +87,12 @@ global $wpdb;
         <?php
             $cultures = query_cultures();
             foreach ($cultures as $row) {
-                echo "
-                    <tr>
-                        <th>
-                            $row["shop_lot_num"]
-                        </th>
-                        <th>
-                            $row["mush_type"]
-                        </th>
-                        <th>
-                            $row["received_date"]
-                        </th>
-                        <th>
-                            $row["vendor"]
-                        </th>
-                        <th>
-                            $row["ven_lot_num"]
-                        </th>
-                    </tr>
-                ";
+                echo "<tr><th>" . $row['shop_lot_num'] . 
+                    "</th><th>" . $row['mush_type'] . 
+                    "</th><th>" . $row['received_date'] . 
+                    "</th><th>" . $row['vendor'] . 
+                    "</th><th>" . $row['ven_lot_num'] . 
+                    "</th></tr>";
             }
         ?>
     </table>
