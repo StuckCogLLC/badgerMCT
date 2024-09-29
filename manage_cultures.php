@@ -83,8 +83,14 @@ global $wpdb;
     </form>
 </div>
 <div class="wrap">
-    <table>
+    <table class="form-table" role="presentation">
         <?php
+            echo "<tr><th>" . "Shop Lot" . 
+                "</th><th>" . "Mushroom" . 
+                "</th><th>" . "Date" . 
+                "</th><th>" . "Vendor" . 
+                "</th><th>" . "Vendor Lot" . 
+                "</th></tr>";
             $cultures = query_cultures();
             foreach ($cultures as $row) {
                 echo "<tr><th>" . $row['shop_lot_num'] . 
