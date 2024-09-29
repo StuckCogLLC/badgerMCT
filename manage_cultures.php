@@ -13,11 +13,7 @@ global $wpdb;
     }
     function query_cultures() {
         global $wpdb;
-        $query = $wpdb->query(
-            $wpdb->prepare(
-                "SELECT * FROM $wpdb->wp_posts"
-            )
-        );
+        $query = $wpdb->query("SELECT * FROM badgerMCT_cultures");
         return $query;
     }
 // insert data into db if present
@@ -88,11 +84,7 @@ global $wpdb;
 </div>
 
 <?php
-
-    
-    echo $wpdb->query("SELECT * FROM badgerMCT_cultures");
-
-/*    $query_culture_results = query_cultures();
+    $query_culture_results = query_cultures();
     if ( $query_culture_results->num_rows > 0 ) {
         while( $row = $query_culture_results->fetch_assoc()) {
             echo "Lot Number: " . $row["shop_lot_num"] . " - Type: " . $row["mush_type"] . " - Date: " . $row["received_date"] . " - Vendor: " . $row["vendor"] . " - Vendor Lot: " . $row["ven_lot_num"] . "<br>";
@@ -100,5 +92,4 @@ global $wpdb;
     } else {
             echo "0 results";
     }
-            */
 ?>
