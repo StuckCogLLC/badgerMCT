@@ -24,7 +24,7 @@ global $wpdb;
             'grain_num' => NULL,
             'shop_lot_num' => $shop_lot_num,
             'mush_type' => $mush_type,
-            'innoc_date' => $inoc_date,
+            'inoc_date' => $inoc_date,
             'grain_type' => $grain_type
         );
         echo $data;
