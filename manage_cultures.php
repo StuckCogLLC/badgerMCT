@@ -88,7 +88,7 @@ global $wpdb;
     //$sql_query = $wpdb->prepare( "SELECT * FROM badgerMCT_cultures" );
     echo "----------<br>";
     //echo "Just the query: " . $wpdb->query("SELECT * FROM {$wpdb->posts}", ARRAY_A) . "<br>";
-    $somevar = $wpdb->query("SELECT * FROM {$wpdb->posts}") . "<br>";
+    $somevar = $wpdb->query("SELECT * FROM badgerMCT_cultures") . "<br>";
     echo "query to a var: " . $somevar . "<br>";
     foreach ($somevar as $row) {
         echo $row->mush_type . "<br>";
