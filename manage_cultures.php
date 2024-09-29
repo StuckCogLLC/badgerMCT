@@ -84,9 +84,10 @@ global $wpdb;
 </div>
 
 <?php
+    $sql_query = $wpdb->prepare( "SELECT * FROM badgerMCT_cultures" );
     echo "----------<br>";
-    echo "Just the query: " . $wpdb->get_results("SELECT * FROM badgerMCT_cultures", ARRAY_A) . "<br>";
-    $somevar = $wpdb->get_results("SELECT * FROM badgerMCT_cultures", ARRAY_A) . "<br>";
+    echo "Just the query: " . $wpdb->get_results($sql_query, ARRAY_A) . "<br>";
+    $somevar = $wpdb->get_results($sql_query, ARRAY_A) . "<br>";
     echo "query to a var: " . $somevar[1] . "<br>";
     echo "function return: " . query_cultures() . "<br>";
     echo "----------<br>";
