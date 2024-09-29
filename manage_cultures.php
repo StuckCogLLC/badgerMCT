@@ -13,8 +13,9 @@ global $wpdb;
     }
     function query_cultures() {
         global $wpdb;
-        $query = $wpdb->query("SELECT * FROM badgerMCT_cultures");
-        return $query;
+        $sql_query = $wpdb->prepare( "SELECT * FROM badgerMCT_cultures" );
+        $returned_cultures = $wpdb->get_results($sql_query, OBJECT);
+        return $returned_cultures;
     }
 // insert data into db if present
     if(isset($_POST['culture_insert'])){
@@ -85,18 +86,15 @@ global $wpdb;
 
 <?php
     $wpdb->show_errors();
-    $sql_query = $wpdb->prepare( "SELECT * FROM badgerMCT_cultures" );
+    //$sql_query = $wpdb->prepare( "SELECT * FROM badgerMCT_cultures" );
     echo "----------<br>";
     //echo "Just the query: " . $wpdb->query("SELECT * FROM {$wpdb->posts}", ARRAY_A) . "<br>";
-    $somevar = $wpdb->get_results($sql_query, OBJECT);
-    echo "----------<br>";
-    echo var_dump($somevar);
-    echo "----------<br>";
-    echo "query to a var: " . $somevar . "<br>";
-    foreach ($somevar as $row) {
-        echo $row->mush_type . "<br>";
-    }
-    //echo "function return: " . query_cultures() . "<br>";
+    //$somevar = $wpdb->get_results($sql_query, OBJECT);
+    //echo "----------<br>";
+    //echo var_dump($somevar);
+    //echo "----------<br>";
+    //echo "query to a var: " . $somevar . "<br>";
+    echo "function return: " . query_cultures() . "<br>";
     echo "----------<br>";
     $wpdb->print_error();
 
