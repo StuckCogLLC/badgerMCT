@@ -82,33 +82,31 @@ global $wpdb;
         <input type="submit" value="Add" name="culture_insert">
     </form>
 </div>
-
-<?php
-    //$wpdb->show_errors();
-    //$sql_query = $wpdb->prepare( "SELECT * FROM badgerMCT_cultures" );
-    //echo "----------<br>";
-    //echo "Just the query: " . $wpdb->query("SELECT * FROM {$wpdb->posts}", ARRAY_A) . "<br>";
-    //$somevar = $wpdb->get_results($sql_query, OBJECT);
-    //echo "----------<br>";
-    //echo var_dump($somevar);
-    //echo "----------<br>";
-    //echo "query to a var: " . $somevar . "<br>";
-    //echo "function return: " . var_dump(query_cultures());
-    //echo "----------<br>";
-    //$wpdb->print_error();
-    echo var_dump(query_cultures());
-    $cultures = query_cultures();
-    echo $cultures;
-    foreach ($cultures as $row) {
-        echo "Lot Number: " . $row["shop_lot_num"] . " - Type: " . $row["mush_type"] . " - Date: " . $row["received_date"] . " - Vendor: " . $row["vendor"] . " - Vendor Lot: " . $row["ven_lot_num"] . "<br>";
-    }
-
-    //$query_culture_results = query_cultures();
-    //if ( $query_culture_results->num_rows > 0 ) {
-    //    while( $row = $query_culture_results->fetch_assoc()) {
-    //        echo "Lot Number: " . $row["shop_lot_num"] . " - Type: " . $row["mush_type"] . " - Date: " . $row["received_date"] . " - Vendor: " . $row["vendor"] . " - Vendor Lot: " . $row["ven_lot_num"] . "<br>";
-    //    } 
-    //} else {
-    //        echo "0 results";
-    //}
-?>
+<div class="wrap">
+    <table>
+        <?php
+            $cultures = query_cultures();
+            foreach ($cultures as $row) {
+                echo "
+                    <tr>
+                        <th>
+                            $row["shop_lot_num"]
+                        </th>
+                        <th>
+                            $row["mush_type"]
+                        </th>
+                        <th>
+                            $row["received_date"]
+                        </th>
+                        <th>
+                            $row["vendor"]
+                        </th>
+                        <th>
+                            $row["ven_lot_num"]
+                        </th>
+                    </tr>
+                ";
+            }
+        ?>
+    </table>
+</div>
