@@ -41,7 +41,7 @@ global $wpdb;
         <?php echo esc_html( get_admin_page_title() ); ?>
     </h1>
 <!-- Start Add grain form -->
-<form action="https://www.stuckcogllc.com/wp-admin/admin.php?page=badgermct_grains" method="post">
+<form action="https://www.stuckcogllc.com/wp-admin/admin.php?page=badgermct_grain" method="post">
         <h2>Add a grain</h2>
         <table style="width:50%;text-align:left">
             <tbody>
