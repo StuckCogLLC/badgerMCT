@@ -83,8 +83,8 @@ global $wpdb;
     </form>
 </div>
 <!-- list cultures -->
-<div class="wrap">
-    <table class="form-table">
+<div>
+    <table>
         <tbody>
             <?php
                 echo "<tr><th style=\"width:10%\">" . "Shop Lot" . 
