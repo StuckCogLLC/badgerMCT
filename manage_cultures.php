@@ -85,11 +85,11 @@ global $wpdb;
 
 <?php
     $wpdb->show_errors();
-    //$sql_query = $wpdb->prepare( "SELECT * FROM badgerMCT_cultures" );
+    $sql_query = $wpdb->prepare( "SELECT * FROM badgerMCT_cultures" );
     echo "----------<br>";
-    echo "Just the query: " . $wpdb->query("SELECT * FROM {$wpdb->posts}", ARRAY_A) . "<br>";
-    //$somevar = $wpdb->get_results($sql_query, ARRAY_A) . "<br>";
-    //echo "query to a var: " . gettype($somevar) . "<br>";
+    //echo "Just the query: " . $wpdb->query("SELECT * FROM {$wpdb->posts}", ARRAY_A) . "<br>";
+    $somevar = $wpdb->get_results($sql_query, ARRAY_A) . "<br>";
+    echo "query to a var: " . $somevar->mush_type . "<br>";
     //echo "function return: " . query_cultures() . "<br>";
     echo "----------<br>";
     $wpdb->print_error();
