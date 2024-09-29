@@ -45,7 +45,7 @@ global $wpdb;
         <h2>Add a culture</h2>
         <table class="form-table" role="presentation">
             <tbody>
-                <tr name="Mushroom Strain" style="width:200px">
+                <tr name="Mushroom Strain">
                     <th>
                         Mushroom Strain:
                     </th>
@@ -87,11 +87,11 @@ global $wpdb;
     <table class="form-table">
         <tbody>
             <?php
-                echo "<tr><th>" . "Shop Lot" . 
-                    "</th><th>" . "Mushroom" . 
-                    "</th><th>" . "Date" . 
-                    "</th><th>" . "Vendor" . 
-                    "</th><th>" . "Vendor Lot" . 
+                echo "<tr><th style=\"width:200px\">" . "Shop Lot" . 
+                    "</th><th style=\"width:200px\">" . "Mushroom" . 
+                    "</th><th style=\"width:200px\">" . "Date" . 
+                    "</th><th style=\"width:200px\">" . "Vendor" . 
+                    "</th><th style=\"width:200px\">" . "Vendor Lot" . 
                     "</th></tr>";
                 $cultures = query_cultures();
                 foreach ($cultures as $row) {
