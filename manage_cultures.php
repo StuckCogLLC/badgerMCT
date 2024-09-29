@@ -43,10 +43,10 @@ global $wpdb;
 <!-- Start Add Culture form -->
 <form action="https://www.stuckcogllc.com/wp-admin/admin.php?page=badgermct_cultures" method="post">
         <h2>Add a culture</h2>
-        <table>
+        <table style="width:50%">
             <tbody>
                 <tr name="Mushroom Strain">
-                    <th>
+                    <th style="width:10%">
                         Mushroom Strain:
                     </th>
                     <th>
