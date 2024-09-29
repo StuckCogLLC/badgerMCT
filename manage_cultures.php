@@ -4,6 +4,7 @@
     </h1>
 
 <?php
+global $wpdb;
 
 // php functions
     function insert_culture($table, $data) {
