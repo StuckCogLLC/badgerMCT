@@ -89,7 +89,7 @@
 <?php
 
     
-    echo $wpdb->query('SELECT * FROM `badgerMCT_cultures`');
+    echo $wpdb->query('SELECT * FROM `badgerMCT_cultures`','ARRAY_A');
 
 /*    $query_culture_results = query_cultures();
     if ( $query_culture_results->num_rows > 0 ) {
