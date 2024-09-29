@@ -90,6 +90,9 @@ global $wpdb;
     //echo "Just the query: " . $wpdb->query("SELECT * FROM {$wpdb->posts}", ARRAY_A) . "<br>";
     $somevar = $wpdb->query("SELECT * FROM {$wpdb->posts}") . "<br>";
     echo "query to a var: " . $somevar . "<br>";
+    foreach ($somevar as $row) {
+        echo $row->mush_type . "<br>";
+    }
     //echo "function return: " . query_cultures() . "<br>";
     echo "----------<br>";
     $wpdb->print_error();
