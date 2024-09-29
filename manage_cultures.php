@@ -93,6 +93,7 @@ global $wpdb;
     //echo "function return: " . query_cultures() . "<br>";
     echo "----------<br>";
     $wpdb->print_error();
+    $wpdb->last_query;
 
     $query_culture_results = query_cultures();
     if ( $query_culture_results->num_rows > 0 ) {
