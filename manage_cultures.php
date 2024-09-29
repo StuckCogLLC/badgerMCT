@@ -88,7 +88,7 @@ global $wpdb;
     //$sql_query = $wpdb->prepare( "SELECT * FROM badgerMCT_cultures" );
     echo "----------<br>";
     //echo "Just the query: " . $wpdb->query("SELECT * FROM {$wpdb->posts}", ARRAY_A) . "<br>";
-    $somevar = $wpdb->get_results("SELECT * FROM {$wpdb->posts}", ARRAY_A) . "<br>";
+    $somevar = $wpdb->query("SELECT * FROM {$wpdb->posts}") . "<br>";
     echo "query to a var: " . $somevar->last_query . "<br>";
     //echo "function return: " . query_cultures() . "<br>";
     echo "----------<br>";
