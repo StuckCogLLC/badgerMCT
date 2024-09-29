@@ -99,7 +99,7 @@ global $wpdb;
     echo query_cultures();
     $cultures = query_cultures();
     echo $cultures;
-    foreach (query_cultures() as $row) {
+    foreach ($cultures as $row) {
         echo "Lot Number: " . $row["shop_lot_num"] . " - Type: " . $row["mush_type"] . " - Date: " . $row["received_date"] . " - Vendor: " . $row["vendor"] . " - Vendor Lot: " . $row["ven_lot_num"] . "<br>";
     }
 
