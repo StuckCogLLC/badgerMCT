@@ -94,7 +94,7 @@ global $wpdb;
     //echo var_dump($somevar);
     //echo "----------<br>";
     //echo "query to a var: " . $somevar . "<br>";
-    echo "function return: " . query_cultures() . "<br>";
+    echo "function return: " . query_cultures();
     echo "----------<br>";
     $wpdb->print_error();
 
