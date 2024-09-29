@@ -87,11 +87,11 @@ global $wpdb;
     <table class="form-table">
         <tbody>
             <?php
-                echo "<tr><th style=\"width:200px\">" . "Shop Lot" . 
-                    "</th><th style=\"width:200px\">" . "Mushroom" . 
-                    "</th><th style=\"width:200px\">" . "Date" . 
-                    "</th><th style=\"width:200px\">" . "Vendor" . 
-                    "</th><th style=\"width:200px\">" . "Vendor Lot" . 
+                echo "<tr><th style=\"width:10%\">" . "Shop Lot" . 
+                    "</th><th style=\"width:10%\">" . "Mushroom" . 
+                    "</th><th style=\"width:10%\">" . "Date" . 
+                    "</th><th style=\"width:10%\">" . "Vendor" . 
+                    "</th><th style=\"width:10%\">" . "Vendor Lot" . 
                     "</th></tr>";
                 $cultures = query_cultures();
                 foreach ($cultures as $row) {
