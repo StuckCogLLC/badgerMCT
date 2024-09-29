@@ -1,8 +1,3 @@
-<div class="wrap">
-    <h1>
-        <?php echo esc_html( get_admin_page_title() ); ?>
-    </h1>
-
 <?php
 global $wpdb;
 
@@ -40,6 +35,11 @@ global $wpdb;
         }
     }
 ?>
+<!-- Start page -->
+<div class="wrap">
+    <h1>
+        <?php echo esc_html( get_admin_page_title() ); ?>
+    </h1>
 <!-- Start Add Culture form -->
 <form action="https://www.stuckcogllc.com/wp-admin/admin.php?page=badgermct_cultures" method="post">
         <h2>Add a culture</h2>
@@ -79,7 +79,7 @@ global $wpdb;
                 </tr>
             </tbody>
         </table>
-        <input type="submit" value="Add" name="culture_insert"><?php if(isset($_POST['culture_insert'])){ echo "Culture Added"; } ?>
+        <input type="submit" value="Add" name="culture_insert"><?php if(isset($_POST['culture_insert'])){ echo "<p>Culture Added</p>"; } ?>
     </form>
 </div>
 <!-- list cultures -->
