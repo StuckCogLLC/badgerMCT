@@ -96,6 +96,7 @@ global $wpdb;
     //echo "function return: " . var_dump(query_cultures());
     //echo "----------<br>";
     //$wpdb->print_error();
+    echo query_cultures();
     $cultures = query_cultures();
     echo $cultures;
     foreach (query_cultures() as $row) {
