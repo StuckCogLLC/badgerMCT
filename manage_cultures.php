@@ -89,7 +89,7 @@
 <?php
 
     
-    echo $wpdb->query('SELECT vendor FROM wp_posts');
+    echo $wpdb->query('SELECT * FROM `badgerMCT_cultures`');
 
 /*    $query_culture_results = query_cultures();
     if ( $query_culture_results->num_rows > 0 ) {
