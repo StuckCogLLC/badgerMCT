@@ -89,6 +89,9 @@ global $wpdb;
     echo "----------<br>";
     //echo "Just the query: " . $wpdb->query("SELECT * FROM {$wpdb->posts}", ARRAY_A) . "<br>";
     $somevar = $wpdb->query("SELECT * FROM badgerMCT_cultures") . "<br>";
+    echo "----------<br>";
+    echo var_dump($somevar);
+    echo "----------<br>";
     echo "query to a var: " . $somevar . "<br>";
     foreach ($somevar as $row) {
         echo $row->mush_type . "<br>";
