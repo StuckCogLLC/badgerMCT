@@ -89,11 +89,10 @@ global $wpdb;
     echo "----------<br>";
     //echo "Just the query: " . $wpdb->query("SELECT * FROM {$wpdb->posts}", ARRAY_A) . "<br>";
     $somevar = $wpdb->get_results("SELECT * FROM {$wpdb->posts}", ARRAY_A) . "<br>";
-    echo "query to a var: " . $somevar . "<br>";
+    echo "query to a var: " . $somevar->last_query . "<br>";
     //echo "function return: " . query_cultures() . "<br>";
     echo "----------<br>";
     $wpdb->print_error();
-    $wpdb->last_query;
 
     $query_culture_results = query_cultures();
     if ( $query_culture_results->num_rows > 0 ) {
