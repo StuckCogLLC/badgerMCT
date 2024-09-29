@@ -84,6 +84,7 @@ global $wpdb;
 </div>
 <div class="wrap">
     <table class="form-table">
+        <tbody>
         <?php
             echo "<tr><th>" . "Shop Lot" . 
                 "</th><th>" . "Mushroom" . 
@@ -101,5 +102,6 @@ global $wpdb;
                     "</th></tr>";
             }
         ?>
+        </tbody>
     </table>
 </div>
