@@ -94,12 +94,12 @@ global $wpdb;
                     "</th><th style=\"width:10%\">" . "Vendor Lot" . 
                     "</th></tr>";
                 $cultures = query_cultures();
-                foreach ($cultures as $row) {
-                    echo "<tr><th>" . $row['shop_lot_num'] . 
-                        "</th><th>" . $row['mush_type'] . 
-                        "</th><th>" . $row['received_date'] . 
-                        "</th><th>" . $row['vendor'] . 
-                        "</th><th>" . $row['ven_lot_num'] . 
+                foreach ($cultures as $culture) {
+                    echo "<tr><th>" . $culture['shop_lot_num'] . 
+                        "</th><th>" . $culture['mush_type'] . 
+                        "</th><th>" . $culture['received_date'] . 
+                        "</th><th>" . $culture['vendor'] . 
+                        "</th><th>" . $culture['ven_lot_num'] . 
                         "</th></tr>";
                 }
             ?>
