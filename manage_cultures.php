@@ -84,19 +84,19 @@ global $wpdb;
 </div>
 
 <?php
-    $wpdb->show_errors();
+    //$wpdb->show_errors();
     //$sql_query = $wpdb->prepare( "SELECT * FROM badgerMCT_cultures" );
-    echo "----------<br>";
+    //echo "----------<br>";
     //echo "Just the query: " . $wpdb->query("SELECT * FROM {$wpdb->posts}", ARRAY_A) . "<br>";
     //$somevar = $wpdb->get_results($sql_query, OBJECT);
     //echo "----------<br>";
     //echo var_dump($somevar);
     //echo "----------<br>";
     //echo "query to a var: " . $somevar . "<br>";
-    echo "function return: " . var_dump(query_cultures());
-    echo "----------<br>";
-    $wpdb->print_error();
-
+    //echo "function return: " . var_dump(query_cultures());
+    //echo "----------<br>";
+    //$wpdb->print_error();
+    $cultures = query_cultures();
     foreach (query_cultures() as $row) {
         echo "Lot Number: " . $row["shop_lot_num"] . " - Type: " . $row["mush_type"] . " - Date: " . $row["received_date"] . " - Vendor: " . $row["vendor"] . " - Vendor Lot: " . $row["ven_lot_num"] . "<br>";
     }
