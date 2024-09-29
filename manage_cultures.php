@@ -89,7 +89,7 @@ global $wpdb;
     echo "----------<br>";
     //echo "Just the query: " . $wpdb->query("SELECT * FROM {$wpdb->posts}", ARRAY_A) . "<br>";
     $somevar = $wpdb->query("SELECT * FROM {$wpdb->posts}") . "<br>";
-    echo "query to a var: " . $somevar->last_query . "<br>";
+    echo "query to a var: " . $somevar . "<br>";
     //echo "function return: " . query_cultures() . "<br>";
     echo "----------<br>";
     $wpdb->print_error();
