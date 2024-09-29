@@ -45,7 +45,7 @@ global $wpdb;
         <h2>Add a culture</h2>
         <table class="form-table" role="presentation">
             <tbody>
-                <tr name="Mushroom Strain" width="200px">
+                <tr name="Mushroom Strain" style="width:200px">
                     <th>
                         Mushroom Strain:
                     </th>
