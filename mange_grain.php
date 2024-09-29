@@ -27,7 +27,7 @@ global $wpdb;
             'innoc_date' => $inoc_date,
             'grain_type' => $grain_type
         );
-        
+        echo $data;
         insert_grain($table, $data);
 
         if ($wpdb->last_error) {
@@ -106,3 +106,4 @@ global $wpdb;
         </tbody>
     </table>
 </div>
+<?php
