@@ -46,7 +46,7 @@ global $wpdb;
         <table style="width:50%;text-align:left">
             <tbody>
                 <tr name="Mushroom Strain">
-                    <th style="width:10%">
+                    <th style="width:20%">
                         Mushroom Strain:
                     </th>
                     <th>
