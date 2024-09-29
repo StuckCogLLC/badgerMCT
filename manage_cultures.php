@@ -89,7 +89,7 @@ global $wpdb;
     echo "----------<br>";
     //echo "Just the query: " . $wpdb->query("SELECT * FROM {$wpdb->posts}", ARRAY_A) . "<br>";
     $somevar = $wpdb->get_results("SELECT * FROM {$wpdb->posts}", ARRAY_A) . "<br>";
-    echo "query to a var: " . $somevar->mush_type . "<br>";
+    echo "query to a var: " . $somevar . "<br>";
     //echo "function return: " . query_cultures() . "<br>";
     echo "----------<br>";
     $wpdb->print_error();
