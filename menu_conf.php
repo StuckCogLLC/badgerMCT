@@ -25,6 +25,18 @@ function badgermct_cultures() {
     );
 }
 
+function badgermct_grain() {
+    add_submenu_page(
+        'badgermct_dashboard',
+        'Mange Grain',
+        'Mange Grain',
+        'moderate_comments',
+        'badgermct_grain',
+        'badgermct_grain_page',
+        2
+    );
+}
+
 // menu pages
 function badgermct_dashboard_page() {
     include 'dashboard.php';
@@ -34,7 +46,12 @@ function badgermct_cultures_page() {
     include 'manage_cultures.php';
 }
 
+function badgermct_grain_page() {
+    include 'mange_grain.php';
+}
+
 // add menu
 add_action( 'admin_menu', 'badgermct_dashboard' );
 add_action( 'admin_menu', 'badgermct_cultures' );
+add_action( 'admin_menu', 'badgermct_grain' );
 ?>
