@@ -1,5 +1,6 @@
 <?php
 global $wpdb;
+$wpdb->flush();
 $table = "badgerMCT_culture";
 
 // php functions
