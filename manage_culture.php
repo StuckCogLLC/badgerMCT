@@ -1,6 +1,5 @@
 <?php
 global $wpdb;
-$wpdb->flush();
 $table = "badgerMCT_culture";
 
 // php functions
@@ -51,9 +50,9 @@ $table = "badgerMCT_culture";
                         <input type="text" name="mush_type">
                     </th>
                 </tr>
-                <tr name="Date Reveived">
+                <tr name="Date">
                     <th>
-                        Date Received:
+                        Date:
                     </th>
                     <th>
                         <input type="date" name="received_date">
