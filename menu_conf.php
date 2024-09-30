@@ -68,6 +68,6 @@ function badgermct_harvest_page() {
 // add menu
 add_action( 'admin_menu', 'badgermct_dashboard' );
 add_action( 'admin_menu', 'badgermct_culture' );
-//add_action( 'admin_menu', 'badgermct_grain' );
+add_action( 'admin_menu', 'badgermct_grain' );
 //add_action( 'admin_menu', 'badgermct_harvest' );
 ?>
