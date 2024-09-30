@@ -59,7 +59,7 @@ function create_tables() {
 
     
     require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
-    dbDelta( $tbl_badgerMCT_cultures );
+    dbDelta( $tbl_badgerMCT_culture );
     dbDelta( $tbl_badgerMCT_grain );
     dbDelta( $tbl_badgerMCT_substrate );
     dbDelta( $tbl_badgerMCT_harvest );
