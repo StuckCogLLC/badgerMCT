@@ -19,42 +19,41 @@ function create_tables() {
     global $wpdb;
     $charset_collate = $wpdb->get_charset_collate();
 
-    $tbl_badgerMCT_cultures = "CREATE TABLE IF NOT EXISTS badgerMCT_cultures (
-        shop_lot_num INT(6) AUTO_INCREMENT,
+    $tbl_badgerMCT_culture = "CREATE TABLE IF NOT EXISTS badgerMCT_cultures (
+        cult_num INT(6) AUTO_INCREMENT,
+        cult_type CHAR(50),
         mush_type CHAR(50),
-        received_date CHAR(10),
+        date_added DATE,
         vendor CHAR(50),
         ven_lot_num CHAR(20),
-        PRIMARY KEY(shop_lot_num)
+        PRIMARY KEY(cult_num)
     ) $charset_collate;";
     
     $tbl_badgerMCT_grain = "CREATE TABLE IF NOT EXISTS badgerMCT_grain (
         grain_num INT(10) AUTO_INCREMENT,
-        shop_lot_num INT(6),
-        mush_type CHAR(50),
-        inoc_date DATE,
         grain_type CHAR(20),
+        cult_num INT(6),
+        inoc_date DATE,
         PRIMARY KEY(grain_num)
     ) $charset_collate;";
 
     $tbl_badgerMCT_substrate = "CREATE TABLE IF NOT EXISTS badgerMCT_substrate (
-        sub_lot_num INT(6) AUTO_INCREMENT,
-        shop_lot_num INT(6),
+        sub_num INT(6) AUTO_INCREMENT,
+        cult_num INT(6),
         mush_type CHAR(50),
         grain_num INT(10),
         inoc_date DATE,
         fruit_date DATE,
         block_weight int(4),
-        PRIMARY KEY(sub_lot_num)
+        PRIMARY KEY(sub_num)
     ) $charset_collate;";
 
     $tbl_badgerMCT_harvest = "CREATE TABLE IF NOT EXISTS badgerMCT_harvest (
         harvest_num INT(10) AUTO_INCREMENT,
-        sub_lot_num INT(6),
-        mush_type CHAR(50),
+        sub_num INT(6),
         harvest_date DATE,
-        harvest_weight INT(4),
-        waste_weight INT(4),
+        harvest_weight FLOAT(4,2),
+        waste_weight FLOAT(4,2),
         PRIMARY KEY(harvest_num)
     ) $charset_collate;";
 

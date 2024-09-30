@@ -1,31 +1,28 @@
 <?php
 global $wpdb;
+$table = "badgerMCT_grain";
 
 // php functions
     function insert_grain($table, $data) {
         global $wpdb;
         $wpdb->insert($table, $data);
     }
-    function query_grains() {
+    function query_grains($table) {
         global $wpdb;
-        $sql_query = $wpdb->prepare( "SELECT * FROM badgerMCT_grain" );
+        $sql_query = $wpdb->prepare( "SELECT * FROM $table" );
         return $wpdb->get_results($sql_query, ARRAY_A);
     }
 // insert data into db if present
     if(isset($_POST['grain_insert'])){
-        
-        $table = 'badgerMCT_grain';
-        $shop_lot_num = $_POST['shop_lot_num'];
-        $mush_type = $_POST['mush_type'];
-        $inoc_date = $_POST['inoc_date'];
         $grain_type = $_POST['grain_type'];
-
+        $cult_num = $_POST['cult_num'];
+        $inoc_date = $_POST['inoc_date'];
         $data = array(
             'grain_num' => NULL,
-            'shop_lot_num' => $shop_lot_num,
+            'grain_type' => $grain_type,
+            'cult_num' => $cult_num,
             'mush_type' => $mush_type,
-            'inoc_date' => $inoc_date,
-            'grain_type' => $grain_type
+            'inoc_date' => $inoc_date
         );
         echo $data;
         insert_grain($table, $data);
@@ -45,36 +42,28 @@ global $wpdb;
         <h2>Add a grain</h2>
         <table style="width:50%;text-align:left">
             <tbody>
-                <tr name="Shop Lot">
+                <tr name="type">
                     <th style="width:20%">
-                        Shop Lot:
-                    </th>
-                    <th>
-                        <input type="text" name="shop_lot_num">
-                    </th>
-                </tr>
-                <tr name="Mushroom Type">
-                    <th>
-                        Mushroom Type:
-                    </th>
-                    <th>
-                        <input type="text" name="mush_type">
-                    </th>
-                </tr>
-                <tr name="innoculation date">
-                    <th>
-                        Innoculation date:
-                    </th>
-                    <th>
-                        <input type="date" name="inoc_date">
-                    </th>
-                </tr>
-                <tr name="Grain Type">
-                    <th>
-                        Grain Type:
+                        Type:
                     </th>
                     <th>
                         <input type="text" name="grain_type">
+                    </th>
+                </tr>
+                <tr name="culture number">
+                    <th>
+                        Culture #:
+                    </th>
+                    <th>
+                        <input type="text" name="cult_num">
+                    </th>
+                </tr>
+                <tr name="inoculation date">
+                    <th>
+                        Inoculation date:
+                    </th>
+                    <th>
+                        <input type="date" name="inoc_date">
                     </th>
                 </tr>
             </tbody>
@@ -87,19 +76,17 @@ global $wpdb;
     <table>
         <tbody>
             <?php
-                echo "<tr><th style=\"width:10%\">" . "Grain Lot" . 
-                    "</th><th style=\"width:10%\">" . "Shop Lot" . 
-                    "</th><th style=\"width:10%\">" . "Mushroom" . 
-                    "</th><th style=\"width:10%\">" . "Inoc Date" . 
-                    "</th><th style=\"width:10%\">" . "grain_type" .
+                echo "<tr><th style=\"width:10%\">" . "ID" . 
+                    "</th><th style=\"width:10%\">" . "Type" .
+                    "</th><th style=\"width:10%\">" . "Culture ID" . 
+                    "</th><th style=\"width:10%\">" . "Date" .
                     "</th></tr>";
                 $grains = query_grains();
-                foreach ($grains as $row) {
-                    echo "<tr><th>" . $row['grain_num'] . 
-                        "</th><th>" . $row['shop_lot_num'] . 
-                        "</th><th>" . $row['mush_type'] . 
-                        "</th><th>" . $row['inoc_date'] . 
-                        "</th><th>" . $row['grain_type'] . 
+                foreach ($grains as $grain) {
+                    echo "<tr><th>" . $grain['grain_num'] . 
+                        "</th><th>" . $grain['grain_type'] . 
+                        "</th><th>" . $grain['cult_num'] . 
+                        "</th><th>" . $grain['inoc_date'] .
                         "</th></tr>";
                 }
             ?>
