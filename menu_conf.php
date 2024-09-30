@@ -58,11 +58,11 @@ function badgermct_culture_page() {
 }
 
 function badgermct_grain_page() {
-    include 'mange_grain.php';
+    include 'manage_grain.php';
 }
 
 function badgermct_harvest_page() {
-    include 'mange_harvest.php';
+    include 'manage_harvest.php';
 }
 
 // add menu
