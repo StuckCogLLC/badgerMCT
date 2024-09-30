@@ -53,8 +53,8 @@ function badgermct_dashboard_page() {
     include 'dashboard.php';
 }
 
-function badgermct_cultures_page() {
-    include 'manage_cultures.php';
+function badgermct_culture_page() {
+    include 'manage_culture.php';
 }
 
 function badgermct_grain_page() {
@@ -67,7 +67,7 @@ function badgermct_harvest_page() {
 
 // add menu
 add_action( 'admin_menu', 'badgermct_dashboard' );
-add_action( 'admin_menu', 'badgermct_cultures' );
+add_action( 'admin_menu', 'badgermct_culture' );
 //add_action( 'admin_menu', 'badgermct_grain' );
 //add_action( 'admin_menu', 'badgermct_harvest' );
 ?>
