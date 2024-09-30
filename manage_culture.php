@@ -4,6 +4,7 @@ $table = "badgerMCT_culture";
 
 // php functions
     function insert_culture($table, $data) {
+        $wpdb->flush();
         global $wpdb;
         $wpdb->insert($table, $data);
     }
