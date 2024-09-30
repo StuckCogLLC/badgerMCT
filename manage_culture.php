@@ -31,10 +31,6 @@ $table = "badgerMCT_culture";
         );
         
         insert_culture($table, $data);
-
-        if ($wpdb->last_error) {
-            echo "wpdb Error: " . $wpdb->last_error;
-        }
     }
 ?>
 <!-- Start page -->

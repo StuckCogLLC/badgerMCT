@@ -26,10 +26,6 @@ $table = "badgerMCT_grain";
         );
         echo $data;
         insert_grain($table, $data);
-
-        if ($wpdb->last_error) {
-            echo "wpdb Error: " . $wpdb->last_error;
-        }
     }
 ?>
 <!-- Start page -->

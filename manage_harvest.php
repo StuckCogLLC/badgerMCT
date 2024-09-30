@@ -26,9 +26,6 @@ $table = "badgerMCT_harvest";
         );
         
         insert_harvest($table, $data);
-        if ($wpdb->last_error) {
-            echo "wpdb Error: " . $wpdb->last_error;
-        }
     }
 ?>
 <!-- Start page -->
