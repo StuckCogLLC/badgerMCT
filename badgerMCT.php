@@ -19,7 +19,12 @@ function create_tables() {
     global $wpdb;
     $charset_collate = $wpdb->get_charset_collate();
 
-    $tbl_badgerMCT_culture = "CREATE TABLE IF NOT EXISTS badgerMCT_cultures (
+    $table_badgerMCT_cultures = $wpdb->prefix . 'badgerMCT_cultures';
+    $table_badgerMCT_grain = $wpdb->prefix . 'badgerMCT_grain';
+    $table_badgerMCT_substrate = $wpdb->prefix . 'badgerMCT_substrate';
+    $table_badgerMCT_harvest = $wpdb->prefix . 'badgerMCT_harvest';
+
+    $tbl_badgerMCT_culture = "CREATE TABLE IF NOT EXISTS {$table_badgerMCT_cultures} (
         cult_num INT(6) AUTO_INCREMENT,
         cult_type CHAR(50),
         mush_type CHAR(50),
@@ -29,7 +34,7 @@ function create_tables() {
         PRIMARY KEY(cult_num)
     ) $charset_collate;";
     
-    $tbl_badgerMCT_grain = "CREATE TABLE IF NOT EXISTS badgerMCT_grain (
+    $tbl_badgerMCT_grain = "CREATE TABLE IF NOT EXISTS {$table_badgerMCT_grain} (
         grain_num INT(10) AUTO_INCREMENT,
         grain_type CHAR(20),
         cult_num INT(6),
@@ -37,7 +42,7 @@ function create_tables() {
         PRIMARY KEY(grain_num)
     ) $charset_collate;";
 
-    $tbl_badgerMCT_substrate = "CREATE TABLE IF NOT EXISTS badgerMCT_substrate (
+    $tbl_badgerMCT_substrate = "CREATE TABLE IF NOT EXISTS {$table_badgerMCT_substrate} (
         sub_num INT(6) AUTO_INCREMENT,
         cult_num INT(6),
         mush_type CHAR(50),
@@ -48,7 +53,7 @@ function create_tables() {
         PRIMARY KEY(sub_num)
     ) $charset_collate;";
 
-    $tbl_badgerMCT_harvest = "CREATE TABLE IF NOT EXISTS badgerMCT_harvest (
+    $tbl_badgerMCT_harvest = "CREATE TABLE IF NOT EXISTS {$table_badgerMCT_harvest} (
         harvest_num INT(10) AUTO_INCREMENT,
         sub_num INT(6),
         harvest_date DATE,
