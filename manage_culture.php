@@ -26,9 +26,9 @@
     $format = array(NULL,'%s','%s','%s','%s','%s');
 
     // insert data into db if present
-    //if(isset($_POST['culture_insert'])){
-    //    wpdb->insert($table, $data, $format);
-    //}
+    if(isset($_POST['culture_insert'])){
+        wpdb->insert($table, $data, $format);
+    }
 ?>
 <!-- Start page -->
 <div>
