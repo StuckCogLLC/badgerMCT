@@ -6,11 +6,15 @@
     //   global $wpdb;
     //    $wpdb->insert($table, $data);
     //}
-    //function query_cultures($table) {
-    //    global $wpdb;
-    //    $sql_query = $wpdb->prepare( "SELECT * FROM $table" );
-    //    return $wpdb->get_results($sql_query, ARRAY_A);
-    //}
+    global $wpdb;
+    $table = $wpdb->prefix . 'badgerMCT_cultures';
+
+
+    function query_cultures($table) {
+        global $wpdb;
+        $sql_query = $wpdb->prepare( "SELECT * FROM $table" );
+        return $wpdb->get_results($sql_query, ARRAY_A);
+    }
 
     //data array
     
@@ -19,7 +23,7 @@
     // insert data into db if present
     if(isset($_POST['culture_insert'])){
         global $wpdb;
-        $table = $wpdb->prefix . 'badgerMCT_cultures';
+        
 
         $data = [
             "cult_num" => NULL,
