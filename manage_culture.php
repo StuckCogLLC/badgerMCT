@@ -1,6 +1,6 @@
 <?php
     global $wpdb;
-    $table = wpdb->prefix . 'badgerMCT_culture';
+    $table = $wpdb->prefix . 'badgerMCT_culture';
 
     // php functions
     //function insert_culture($table, $data) {
