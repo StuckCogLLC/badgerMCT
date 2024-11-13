@@ -8,16 +8,16 @@
     //   global $wpdb;
     //    $wpdb->insert($table, $data);
     //}
-    function query_cultures($table) {
-        global $wpdb;
-        $sql_query = $wpdb->prepare( "SELECT * FROM $table" );
-        return $wpdb->get_results($sql_query, ARRAY_A);
-    }
+    //function query_cultures($table) {
+    //    global $wpdb;
+    //    $sql_query = $wpdb->prepare( "SELECT * FROM $table" );
+    //    return $wpdb->get_results($sql_query, ARRAY_A);
+    //}
 
     //data array
     $data = array(
         'cult_num' => NULL,
-        'cult_type' => $_POST['cult_type'];,
+        'cult_type' => $_POST['cult_type'],
         'mush_type' => $_POST['mush_type'],
         'date_added' => $_POST['date_added'],
         'vendor' => $_POST['vendor'],
@@ -27,7 +27,7 @@
 
     // insert data into db if present
     if(isset($_POST['culture_insert'])){
-        insert_culture($table, $data, $format);
+        wpdb->insert($table, $data, $format);
     }
 ?>
 <!-- Start page -->
