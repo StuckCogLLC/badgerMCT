@@ -16,11 +16,12 @@
     $data = array(
         'cult_num' => NULL,
         'mush_type' => $_POST['mush_type'],
+        'cult_type' => $_POST['cult_type'],
         'date_added' => $_POST['received_date'],
         'vendor' => $_POST['vendor'],
         'ven_lot_num' => $_POST['ven_lot_num']
     );
-    $format = array(NULL,'%s','%s','%s','%s');
+    $format = array(NULL,'%s','%s','%s','%s','%s');
 
     // insert data into db if present
     if(isset($_POST['culture_insert'])){
@@ -37,7 +38,11 @@
 <!-- debug -->
  <div>
     <?php
+      echo($_POST['mush_type']);
+      echo($_POST['cult_type']);
       echo($_POST['received_date']);
+      echo($_POST['vendor']);
+      echo($_POST['ven_lot_num']);
     ?>
  </div>
 
@@ -52,6 +57,14 @@
                     </th>
                     <th>
                         <input type="text" name="mush_type">
+                    </th>
+                </tr>
+                <tr name="Culture Type">
+                    <th style="width: 20%">
+                        Culture Type:
+                    </th>
+                    <th>
+                        <input type="text" name="cult_type">
                     </th>
                 </tr>
                 <tr name="Date">
