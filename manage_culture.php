@@ -23,7 +23,7 @@
         // format
         $format = [NULL,'%s','%s','%s','%s','%s'];
         // wpdb insert
-        $wpdb->insert($table, $data, $format);
+        $wpdb->insert($table, $data);
     }
 ?>
 <!-- Start page -->
