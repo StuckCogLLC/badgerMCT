@@ -1,8 +1,8 @@
 <?php
-global $wpdb;
-$table = "badgerMCT_culture";
+    global $wpdb;
+    $table = wpdb->prefix . 'badgerMCT_culture';
 
-// php functions
+    // php functions
     function insert_culture($table, $data) {
         $wpdb->flush();
         global $wpdb;
@@ -13,22 +13,19 @@ $table = "badgerMCT_culture";
         $sql_query = $wpdb->prepare( "SELECT * FROM $table" );
         return $wpdb->get_results($sql_query, ARRAY_A);
     }
-// insert data into db if present
+
+    // post data array
+    $data = array(
+        'cult_num' => NULL,
+        'cult_type' => $_POST['cult_type'];,
+        'mush_type' => $_POST['mush_type'],
+        'date_added' => $_POST['date_added'],
+        'vendor' => $_POST['vendor'],
+        'ven_lot_num' => $_POST['ven_lot_num']
+    );
+
+    // insert data into db if present
     if(isset($_POST['culture_insert'])){
-        $cult_type = $_POST['cult_type'];
-        $mush_type = $_POST['mush_type'];
-        $date_added = $_POST['date_added'];
-        $vendor = $_POST['vendor'];
-        $ven_lot_num = $_POST['ven_lot_num'];
-        $data = array(
-            'cult_num' => NULL,
-            'cult_type' => $cult_type,
-            'mush_type' => $mush_type,
-            'date_added' => $received_date,
-            'vendor' => $vendor,
-            'ven_lot_num' => $ven_lot_num
-        );
-        
         insert_culture($table, $data);
     }
 ?>
