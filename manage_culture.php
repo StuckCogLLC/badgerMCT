@@ -53,7 +53,7 @@
                         <input type="text" name="cult_type">
                     </th>
                 </tr>
-                <tr name="Date">
+                <tr name="Date" value="2024-01-01">
                     <th>
                         Date:
                     </th>
