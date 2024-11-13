@@ -27,6 +27,7 @@
     }
 ?>
 <!-- Start page -->
+ <?php echo($_POST['received_date']); ?>
 <div>
     <h1>
         <?php echo esc_html( get_admin_page_title() ); ?>
