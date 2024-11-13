@@ -2,7 +2,7 @@
     global $wpdb;
     $table = $wpdb->prefix . 'badgerMCT_cultures';
 
-
+    // query culture table
     function query_cultures($table) {
         global $wpdb;
         $sql_query = $wpdb->prepare( "SELECT * FROM $table" );
@@ -32,7 +32,6 @@
         <?php echo esc_html( get_admin_page_title() ); ?>
     </h1>
 <!-- Start Add Culture form -->
-<?php echo($_POST['received_date']); ?>
 <form action="https://www.stuckcogllc.com/wp-admin/admin.php?page=badgermct_culture" method="post">
         <h2>Add a culture</h2>
         <table style="width:50%;text-align:left">
