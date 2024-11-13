@@ -16,10 +16,6 @@
         return $wpdb->get_results($sql_query, ARRAY_A);
     }
 
-    //data array
-    
-    
-
     // insert data into db if present
     if(isset($_POST['culture_insert'])){
         global $wpdb;
@@ -118,7 +114,7 @@
                     "</th><th style=\"width:10%\">" . "Vendor" . 
                     "</th><th style=\"width:10%\">" . "Vendor Lot" . 
                     "</th></tr>";
-                $cultures = query_cultures();
+                $cultures = query_cultures($table);
                 foreach ($cultures as $culture) {
                     echo "<tr><th>" . $culture['cult_num'] . 
                         "</th><th>" . $culture['cult_type'] . 
