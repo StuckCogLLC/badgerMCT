@@ -78,7 +78,7 @@
     </form>
 </div>
 <!-- list cultures -->
-
+<!--
 <div>
     <table>
         <tbody>
@@ -103,4 +103,4 @@
             */?>
         </tbody>
     </table>
-</div>
+</div> -->
