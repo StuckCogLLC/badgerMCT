@@ -23,7 +23,7 @@
     //    'vendor' => $_POST['vendor'],
     //    'ven_lot_num' => $_POST['ven_lot_num']
     //);
-    $format = array(NULL,'%s','%s','%s','%s','%s');
+    //$format = array(NULL,'%s','%s','%s','%s','%s');
 
     // insert data into db if present
     //if(isset($_POST['culture_insert'])){
