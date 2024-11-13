@@ -27,6 +27,7 @@
 
     // insert data into db if present
     if(isset($_POST['culture_insert'])){
+        echo "submit";
         $wpdb->insert($table, $data, $format);
     }
 ?>
