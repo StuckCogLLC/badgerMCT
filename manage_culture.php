@@ -16,7 +16,7 @@
     $data = array(
         'cult_num' => NULL,
         'mush_type' => $_POST['mush_type'],
-        'date_added' => $_POST['date_added'],
+        'date_added' => $_POST['received_date'],
         'vendor' => $_POST['vendor'],
         'ven_lot_num' => $_POST['ven_lot_num']
     );
@@ -37,7 +37,7 @@
 <!-- debug -->
  <div>
     <?php
-      echo($_POST['date_added']);
+      echo($_POST['received_date']);
     ?>
  </div>
 
