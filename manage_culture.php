@@ -37,7 +37,7 @@
 <!-- debug -->
  <div>
     <?php
-      echo($_POST['culture_insert']);
+      echo($_POST['date_added']);
     ?>
  </div>
 
