@@ -74,7 +74,7 @@
                 </tr>
             </tbody>
         </table>
-        <input type="submit" value="Add" name="culture_insert"><?php if(isset($_POST['culture_insert'])){ echo "<p>Culture Added</p>"; } ?>
+        <input type="submit" value="Add" name="culture_insert">
     </form>
 </div>
 <!-- list cultures -->
