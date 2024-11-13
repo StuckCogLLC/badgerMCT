@@ -15,11 +15,11 @@
     //data array
     $data = [
         "cult_num" => NULL,
-        "mush_type" => $_POST['mush_type'],
-        "cult_type" => $_POST['cult_type'],
-        "date_added" => $_POST['received_date'],
-        "vendor" => $_POST['vendor'],
-        "ven_lot_num" => $_POST['ven_lot_num']
+        "mush_type" => isset($_POST['mush_type']),
+        "cult_type" => isset($_POST['cult_type']),
+        "date_added" => isset($_POST['received_date']),
+        "vendor" => isset($_POST['vendor']),
+        "ven_lot_num" => isset($_POST['ven_lot_num'])
     ];
     $format = [NULL,'%s','%s','%s','%s','%s'];
 
