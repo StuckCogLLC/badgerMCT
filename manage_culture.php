@@ -38,7 +38,7 @@
 <!-- debug -->
  <div>
     <?php
-      echo $_POST['cult_type'];
+      echo($_POST['cult_type']);
     ?>
  </div>
 
