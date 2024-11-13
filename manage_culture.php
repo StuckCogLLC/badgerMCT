@@ -3,18 +3,18 @@
     $table = wpdb->prefix . 'badgerMCT_culture';
 
     // php functions
-    function insert_culture($table, $data) {
-        $wpdb->flush();
-        global $wpdb;
-        $wpdb->insert($table, $data);
-    }
+    //function insert_culture($table, $data) {
+    //    $wpdb->flush();
+    //   global $wpdb;
+    //    $wpdb->insert($table, $data);
+    //}
     function query_cultures($table) {
         global $wpdb;
         $sql_query = $wpdb->prepare( "SELECT * FROM $table" );
         return $wpdb->get_results($sql_query, ARRAY_A);
     }
 
-    // post data array
+    //data array
     $data = array(
         'cult_num' => NULL,
         'cult_type' => $_POST['cult_type'];,
@@ -23,10 +23,11 @@
         'vendor' => $_POST['vendor'],
         'ven_lot_num' => $_POST['ven_lot_num']
     );
+    $format = array(NULL,'%s','%s','%s','%s','%s');
 
     // insert data into db if present
     if(isset($_POST['culture_insert'])){
-        insert_culture($table, $data);
+        insert_culture($table, $data, $format);
     }
 ?>
 <!-- Start page -->
