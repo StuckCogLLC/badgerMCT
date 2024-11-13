@@ -106,10 +106,11 @@
     </form>
 </div>
 <!-- list cultures -->
-<!--
+
 <div>
     <table>
         <tbody>
+            <?php
                 echo "<tr><th style=\"width:10%\">" . "ID" .
                     "</th><th style=\"width:10%\">" . "Type" .
                     "</th><th style=\"width:10%\">" . "Mushroom" . 
@@ -127,6 +128,7 @@
                         "</th><th>" . $culture['ven_lot_num'] . 
                         "</th></tr>";
                 }
+            ?>
         </tbody>
     </table>
-</div> -->
+</div>
