@@ -1,35 +1,29 @@
 <?php
-global $wpdb;
-$table = "badgerMCT_culture";
+    global $wpdb;
+    $table = $wpdb->prefix . 'badgerMCT_cultures';
 
-// php functions
-    function insert_culture($table, $data) {
-        $wpdb->flush();
-        global $wpdb;
-        $wpdb->insert($table, $data);
-    }
+    // query culture table
     function query_cultures($table) {
         global $wpdb;
         $sql_query = $wpdb->prepare( "SELECT * FROM $table" );
         return $wpdb->get_results($sql_query, ARRAY_A);
     }
-// insert data into db if present
+
+    // insert data into db if present
     if(isset($_POST['culture_insert'])){
-        $cult_type = $_POST['cult_type'];
-        $mush_type = $_POST['mush_type'];
-        $date_added = $_POST['date_added'];
-        $vendor = $_POST['vendor'];
-        $ven_lot_num = $_POST['ven_lot_num'];
-        $data = array(
-            'cult_num' => NULL,
-            'cult_type' => $cult_type,
-            'mush_type' => $mush_type,
-            'date_added' => $received_date,
-            'vendor' => $vendor,
-            'ven_lot_num' => $ven_lot_num
-        );
-        
-        insert_culture($table, $data);
+        // table data
+        $data = [
+            "cult_num" => NULL,
+            "mush_type" => $_POST['mush_type'],
+            "cult_type" => $_POST['cult_type'],
+            "date_added" => $_POST['received_date'],
+            "vendor" => $_POST['vendor'],
+            "ven_lot_num" => $_POST['ven_lot_num']
+        ];
+        // format
+        $format = [NULL,'%s','%s','%s','%s','%s'];
+        // wpdb insert
+        $wpdb->insert($table, $data);
     }
 ?>
 <!-- Start page -->
@@ -50,7 +44,15 @@ $table = "badgerMCT_culture";
                         <input type="text" name="mush_type">
                     </th>
                 </tr>
-                <tr name="Date">
+                <tr name="Culture Type">
+                    <th style="width: 20%">
+                        Culture Type:
+                    </th>
+                    <th>
+                        <input type="text" name="cult_type">
+                    </th>
+                </tr>
+                <tr name="Date" value="2024-01-01">
                     <th>
                         Date:
                     </th>
@@ -76,22 +78,36 @@ $table = "badgerMCT_culture";
                 </tr>
             </tbody>
         </table>
-        <input type="submit" value="Add" name="culture_insert"><?php if(isset($_POST['culture_insert'])){ echo "<p>Culture Added</p>"; } ?>
+        <input type="submit" value="Add" name="culture_insert">
     </form>
 </div>
 <!-- list cultures -->
+
 <div>
     <table>
         <tbody>
+            <tr>
+                <th style=width:10%>
+                    ID
+                </th>
+                <th style=width:10%>
+                    Type
+                </th>
+                <th style=width:10%>
+                    Mushroom
+                </th>
+                <th style=width:10%>
+                    Date
+                </th>
+                <th style=width:10%>
+                    Vendor
+                </th>
+                <th style=width:10%>
+                    Vendor Lot
+                </th>
+            </tr>
             <?php
-                echo "<tr><th style=\"width:10%\">" . "ID" .
-                    "</th><th style=\"width:10%\">" . "Type" .
-                    "</th><th style=\"width:10%\">" . "Mushroom" . 
-                    "</th><th style=\"width:10%\">" . "Date" . 
-                    "</th><th style=\"width:10%\">" . "Vendor" . 
-                    "</th><th style=\"width:10%\">" . "Vendor Lot" . 
-                    "</th></tr>";
-                $cultures = query_cultures();
+                $cultures = query_cultures($table);
                 foreach ($cultures as $culture) {
                     echo "<tr><th>" . $culture['cult_num'] . 
                         "</th><th>" . $culture['cult_type'] . 
