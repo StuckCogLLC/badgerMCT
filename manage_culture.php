@@ -16,7 +16,7 @@
             "cult_num" => NULL,
             "mush_type" => isset($_POST['mush_type']),
             "cult_type" => isset($_POST['cult_type']),
-            "date_added" => isset($_POST['received_date']),
+            "date_added" => $_POST['received_date'],
             "vendor" => isset($_POST['vendor']),
             "ven_lot_num" => isset($_POST['ven_lot_num'])
         ];
