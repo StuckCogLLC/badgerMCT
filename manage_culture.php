@@ -39,6 +39,7 @@
  <div>
     <?php
       echo $_POST['cult_type'];
+    ?>
  </div>
 
     <!-- Start Add Culture form -->
