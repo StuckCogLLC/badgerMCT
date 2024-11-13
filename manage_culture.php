@@ -15,20 +15,20 @@
     //}
 
     //data array
-    //$data = array(
-    //    'cult_num' => NULL,
-    //    'cult_type' => $_POST['cult_type'],
-    //    'mush_type' => $_POST['mush_type'],
-    //    'date_added' => $_POST['date_added'],
-    //    'vendor' => $_POST['vendor'],
-    //    'ven_lot_num' => $_POST['ven_lot_num']
-    //);
+    $data = array(
+        'cult_num' => NULL,
+        'cult_type' => $_POST['cult_type'],
+        'mush_type' => $_POST['mush_type'],
+        'date_added' => $_POST['date_added'],
+        'vendor' => $_POST['vendor'],
+        'ven_lot_num' => $_POST['ven_lot_num']
+    );
     $format = array(NULL,'%s','%s','%s','%s','%s');
 
     // insert data into db if present
-    if(isset($_POST['culture_insert'])){
-        wpdb->insert($table, $data, $format);
-    }
+    //if(isset($_POST['culture_insert'])){
+    //    wpdb->insert($table, $data, $format);
+    //}
 ?>
 <!-- Start page -->
 <div>
@@ -78,10 +78,11 @@
     </form>
 </div>
 <!-- list cultures -->
+
 <div>
     <table>
         <tbody>
-            <?php
+            <?php /*
                 echo "<tr><th style=\"width:10%\">" . "ID" .
                     "</th><th style=\"width:10%\">" . "Type" .
                     "</th><th style=\"width:10%\">" . "Mushroom" . 
@@ -99,7 +100,7 @@
                         "</th><th>" . $culture['ven_lot_num'] . 
                         "</th></tr>";
                 }
-            ?>
+            */?>
         </tbody>
     </table>
 </div>
