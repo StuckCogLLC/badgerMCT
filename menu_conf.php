@@ -40,8 +40,8 @@ function badgermct_grain() {
 function badgermct_harvest() {
     add_submenu_page(
         'badgermct_dashboard',
-        'Mange Harvest',
-        'Mange Harvest',
+        'Manage Harvest',
+        'Manage Harvest',
         'moderate_comments',
         'badgermct_harvest',
         'badgermct_harvest_page',
