@@ -28,8 +28,8 @@ function badgermct_culture() {
 function badgermct_grain() {
     add_submenu_page(
         'badgermct_dashboard',
-        'Mange Grain',
-        'Mange Grain',
+        'Manage Grain',
+        'Manage Grain',
         'moderate_comments',
         'badgermct_grain',
         'badgermct_grain_page',
