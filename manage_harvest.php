@@ -10,7 +10,7 @@ function query_harvest($table) {
 }
 
 // insert data into db if present
-if(isset($_POST['grain_insert'])){
+if(isset($_POST['harvest_insert'])){
     // table data
     $data = [
         "harvest_num" => NULL,
