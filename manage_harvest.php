@@ -1,32 +1,29 @@
 <?php
-global $wpdb;
-$table = "badgerMCT_harvest";
+    global $wpdb;
+    $table = $wpdb->prefix . 'badgerMCT_harvest';
+
 // php functions
-    function insert_harvest($table, $data) {
-        global $wpdb;
-        $wpdb->insert($table, $data);
-    }
-    function query_harvests($table) {
-        global $wpdb;
-        $sql_query = $wpdb->prepare( "SELECT * FROM $table" );
-        return $wpdb->get_results($sql_query, ARRAY_A);
-    }
+function query_harvest($table) {
+    global $wpdb;
+    $sql_query = $wpdb->prepare( "SELECT * FROM $table" );
+    return $wpdb->get_results($sql_query, ARRAY_A);
+}
+
 // insert data into db if present
-    if(isset($_POST['harvest_insert'])){
-        $sub_num = $_POST['sub_num'];
-        $harvest_date = $_POST['harvest_date'];
-        $harvest_weight = $_POST['harvest_weight'];
-        $waste_weight = $_POST['waste_weight'];
-        $data = array(
-            'harvest_num' => NULL,
-            'sub_num' => $sub_num,
-            'harvest_date' => $harvest_date,
-            'harvest_weight' => $harvest_weight,
-            'waste_weight' => $waste_weight
-        );
-        
-        insert_harvest($table, $data);
-    }
+if(isset($_POST['harvest_insert'])){
+    // table data
+    $data = [
+        "harvest_num" => NULL,
+        "sub_num" => $_POST['sub_num'],
+        "harvest_date" => $_POST['harvest_date'],
+        "harvest_weight" => $_POST['harvest_weight'],
+        "waste_weight" => $_POST['waste_weight']
+    ];
+    // format
+    $format = [NULL,'%s','%s','%s'];
+    // wpdb insert
+    $wpdb->insert($table, $data);
+}
 ?>
 <!-- Start page -->
 <div>
@@ -46,7 +43,7 @@ $table = "badgerMCT_harvest";
                         <input type="text" name="sub_num">
                     </th>
                 </tr>
-                <tr name="harvest date">
+                <tr name="harvest date" value="2024-01-01">
                     <th>
                         Harvest Date:
                     </th>
@@ -72,21 +69,32 @@ $table = "badgerMCT_harvest";
                 </tr>
             </tbody>
         </table>
-        <input type="submit" value="Add" name="harvest_insert"><?php if(isset($_POST['harvest_insert'])){ echo "<p>harvest Added</p>"; } ?>
+        <input type="submit" value="Add" name="harvest_insert">
     </form>
 </div>
 <!-- list harvests -->
 <div>
     <table>
         <tbody>
+            <tr>
+                <th style=width:10%>
+                    ID
+                </th>
+                <th style=width:10%>
+                    Substrate ID
+                </th>
+                <th style=width:10%>
+                    Date
+                </th>
+                <th style=width:10%>
+                    Harvest Weight
+                </th>
+                <th style=width:10%>
+                    Waste Weight
+                </th>
+            </tr>
             <?php
-                echo "<tr><th style=\"width:10%\">" . "ID" . 
-                    "</th><th style=\"width:10%\">" . "Substrate ID" . 
-                    "</th><th style=\"width:10%\">" . "Date" . 
-                    "</th><th style=\"width:10%\">" . "Harvest Weight" . 
-                    "</th><th style=\"width:10%\">" . "Waste Weight" . 
-                    "</th></tr>";
-                $harvests = query_harvests();
+                $harvests = query_harvest($table);
                 foreach ($harvests as $harvest) {
                     echo "<tr><th>" . $harvest['harvest_num'] . 
                         "</th><th>" . $harvest['sub_num'] . 
