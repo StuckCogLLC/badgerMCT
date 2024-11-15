@@ -1,31 +1,27 @@
 <?php
-global $wpdb;
-$table = "badgerMCT_grain";
+    global $wpdb;
+    $table = $wpdb->prefix . 'badgerMCT_cultures';
 
 // php functions
-    function insert_grain($table, $data) {
-        global $wpdb;
-        $wpdb->insert($table, $data);
-    }
     function query_grains($table) {
         global $wpdb;
         $sql_query = $wpdb->prepare( "SELECT * FROM $table" );
         return $wpdb->get_results($sql_query, ARRAY_A);
     }
+    
 // insert data into db if present
     if(isset($_POST['grain_insert'])){
-        $grain_type = $_POST['grain_type'];
-        $cult_num = $_POST['cult_num'];
-        $inoc_date = $_POST['inoc_date'];
-        $data = array(
-            'grain_num' => NULL,
-            'grain_type' => $grain_type,
-            'cult_num' => $cult_num,
-            'mush_type' => $mush_type,
-            'inoc_date' => $inoc_date
-        );
-        echo $data;
-        insert_grain($table, $data);
+        // table data
+        $data = [
+            "grain_num" => NULL,
+            "grain_type" => $_POST['grain_type'],
+            "cult_num" => $_POST['cult_num'],
+            "inoc_date" => $_POST['inoc_date']
+        ];
+        // format
+        $format = [NULL,'%s','%s','%s'];
+        // wpdb insert
+        $wpdb->insert($table, $data);
     }
 ?>
 <!-- Start page -->
@@ -40,7 +36,7 @@ $table = "badgerMCT_grain";
             <tbody>
                 <tr name="type">
                     <th style="width:20%">
-                        Type:
+                        Grain Type:
                     </th>
                     <th>
                         <input type="text" name="grain_type">
@@ -48,13 +44,13 @@ $table = "badgerMCT_grain";
                 </tr>
                 <tr name="culture number">
                     <th>
-                        Culture #:
+                        Culture No:
                     </th>
                     <th>
                         <input type="text" name="cult_num">
                     </th>
                 </tr>
-                <tr name="inoculation date">
+                <tr name="inoculation date" value="2024-01-01">
                     <th>
                         Inoculation date:
                     </th>
@@ -64,20 +60,29 @@ $table = "badgerMCT_grain";
                 </tr>
             </tbody>
         </table>
-        <input type="submit" value="Add" name="grain_insert"><?php if(isset($_POST['grain_insert'])){ echo "<p>grain Added</p>"; } ?>
+        <input type="submit" value="Add" name="grain_insert">
     </form>
 </div>
 <!-- list grains -->
 <div>
     <table>
         <tbody>
+            <tr>
+                <th style=width:10%>
+                    ID
+                </th>
+                <th style=width:10%>
+                    Type
+                </th>
+                <th style=width:10%>
+                    Culture ID
+                </th>
+                <th style=width:10%>
+                    Date
+                </th>
+            </tr>
             <?php
-                echo "<tr><th style=\"width:10%\">" . "ID" . 
-                    "</th><th style=\"width:10%\">" . "Type" .
-                    "</th><th style=\"width:10%\">" . "Culture ID" . 
-                    "</th><th style=\"width:10%\">" . "Date" .
-                    "</th></tr>";
-                $grains = query_grains();
+                $grains = query_grains($table);
                 foreach ($grains as $grain) {
                     echo "<tr><th>" . $grain['grain_num'] . 
                         "</th><th>" . $grain['grain_type'] . 
@@ -89,4 +94,3 @@ $table = "badgerMCT_grain";
         </tbody>
     </table>
 </div>
-<?php
