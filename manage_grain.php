@@ -1,6 +1,6 @@
 <?php
     global $wpdb;
-    $table = $wpdb->prefix . 'badgerMCT_cultures';
+    $table = $wpdb->prefix . 'badgerMCT_grain';
 
 // php functions
     function query_grains($table) {
