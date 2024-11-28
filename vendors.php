@@ -84,7 +84,8 @@
             <?php
                 $vendors = query_vendors($table);
                 foreach ($vendors as $vendor) {
-                    echo "<tr><th>" . $vendor['ven_name'] . 
+                    echo "<tr><th>" . $vendor['ven_num'] . 
+                        "</th><th>" . $vendor['ven_name'] . 
                         "</th><th>" . $vendor['ven_phone'] . 
                         "</th><th>" . $vendor['ven_notes'] . 
                         "</th></tr>";
