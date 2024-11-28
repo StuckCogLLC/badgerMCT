@@ -58,7 +58,7 @@
                         Notes:
                     </th>
                     <th>
-                        <input type="text" name="ven_notes" size="250">
+                        <input type="text" name="ven_notes" size="20">
                     </th>
                 </tr>
             </tbody>
