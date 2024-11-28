@@ -1,6 +1,4 @@
 <?php 
-    echo "vendor page";
-
     global $wpdb;
     $table = $wpdb->prefix . 'badgerMCT_vendors';
 
