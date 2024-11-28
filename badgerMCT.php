@@ -67,6 +67,7 @@ function create_tables() {
         ven_num INT(10) AUTO_INCREMENT,
         ven_name CHAR(50),
         ven_phone CHAR(11),
+        ven_notes CHAR(500),
         PRIMARY KEY(ven_num)
     ) $charset_collate;";
 
