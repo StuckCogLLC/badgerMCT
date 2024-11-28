@@ -58,7 +58,7 @@ function badgermct_vendors() {
         'badgermct_vendors',
         'badgermct_vendors_page',
         2
-    )
+    );
 }
 
 // menu pages
