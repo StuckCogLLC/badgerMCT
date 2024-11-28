@@ -23,6 +23,7 @@ function create_tables() {
     $table_badgerMCT_grain = $wpdb->prefix . 'badgerMCT_grain';
     $table_badgerMCT_substrate = $wpdb->prefix . 'badgerMCT_substrate';
     $table_badgerMCT_harvest = $wpdb->prefix . 'badgerMCT_harvest';
+    $table_badgerMCT_vendors = $wpdb->prefix . 'badgerMCT_veneor'
 
     $tbl_badgerMCT_culture = "CREATE TABLE IF NOT EXISTS {$table_badgerMCT_cultures} (
         cult_num INT(6) AUTO_INCREMENT,
@@ -62,12 +63,20 @@ function create_tables() {
         PRIMARY KEY(harvest_num)
     ) $charset_collate;";
 
+    $tbl_badgerMCT_vendor = "CREATE TABLE IF NOT EXISTS {$table_badgerMCT_vendor} (
+        ven_num INT(10) AUTO_INCREMENT,
+        ven_name CHAR(50),
+        ven_phone CHAR(11),
+        PRIMARY KEY(ven_num)
+    ) $charset_collate;";
+
     
     require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
     dbDelta( $tbl_badgerMCT_culture );
     dbDelta( $tbl_badgerMCT_grain );
     dbDelta( $tbl_badgerMCT_substrate );
     dbDelta( $tbl_badgerMCT_harvest );
+    dbDelta( $tbl_badgerMCT_vendor );
 }
 register_activation_hook( __FILE__, 'create_tables' );
 

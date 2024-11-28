@@ -9,6 +9,8 @@
         return $wpdb->get_results($sql_query, ARRAY_A);
     }
 
+    
+
     // insert data into db if present
     if(isset($_POST['culture_insert'])){
         // table data
