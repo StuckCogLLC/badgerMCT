@@ -63,7 +63,7 @@ function create_tables() {
         PRIMARY KEY(harvest_num)
     ) $charset_collate;";
 
-    $tbl_badgerMCT_vendor = "CREATE TABLE IF NOT EXISTS {$table_badgerMCT_vendor} (
+    $tbl_badgerMCT_vendors = "CREATE TABLE IF NOT EXISTS {$table_badgerMCT_vendors} (
         ven_num INT(10) AUTO_INCREMENT,
         ven_name CHAR(50),
         ven_phone CHAR(11),
@@ -76,7 +76,7 @@ function create_tables() {
     dbDelta( $tbl_badgerMCT_grain );
     dbDelta( $tbl_badgerMCT_substrate );
     dbDelta( $tbl_badgerMCT_harvest );
-    dbDelta( $tbl_badgerMCT_vendor );
+    dbDelta( $tbl_badgerMCT_vendors );
 }
 register_activation_hook( __FILE__, 'create_tables' );
 
