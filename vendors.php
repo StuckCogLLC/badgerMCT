@@ -4,6 +4,13 @@
     global $wpdb;
     $table = $wpdb->prefix . 'badgerMCT_vendors';
 
+    // php functions
+    function query_vendors($table) {
+        global $wpdb;
+        $sql_query = $wpdb->prepare( "SELECT * FROM $table" );
+        return $wpdb->get_results($sql_query, ARRAY_A);
+    }
+
     // insert data into db if present
     if(isset($_POST['vendor_insert'])){
         // table data
