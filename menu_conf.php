@@ -48,7 +48,17 @@ function badgermct_harvest() {
         2
     );
 }
-
+function badgermct_substrate() {
+    add_submenu_page(
+        'badgermct_dashboard',
+        'Mange Substrate',
+        'Mange Substrate',
+        'moderate_comments',
+        'badgermct_substrate',
+        'badgermct_substrate_page',
+        2
+    );
+}
 function badgermct_vendors() {
     add_submenu_page(
         'badgermct_dashboard',
@@ -86,6 +96,7 @@ function badgermct_vendors_page() {
 add_action( 'admin_menu', 'badgermct_dashboard' );
 add_action( 'admin_menu', 'badgermct_culture' );
 add_action( 'admin_menu', 'badgermct_grain' );
+add_action( 'admin_menu', 'badgermct_substrate' );
 add_action( 'admin_menu', 'badgermct_harvest' );
 add_action( 'admin_menu', 'badgermct_vendors' );
 ?>

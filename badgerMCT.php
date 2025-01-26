@@ -45,11 +45,23 @@ function create_tables() {
 
     $tbl_badgerMCT_substrate = "CREATE TABLE IF NOT EXISTS {$table_badgerMCT_substrate} (
         sub_num INT(6) AUTO_INCREMENT,
+#culture number
         cult_num INT(6),
+#mushroom type
         mush_type CHAR(50),
+#mushroom type
         grain_num INT(10),
+#inoculation data
         inoc_date DATE,
+#fruiting date
         fruit_date DATE,
+#first fruit date
+        first_fruit_weight INT(10),
+#second fruit date
+        second_fruit_weight INT(10),
+#third fruit weight
+        third_fruit_weight INT(10),
+#block weight
         block_weight int(4),
         PRIMARY KEY(sub_num)
     ) $charset_collate;";
