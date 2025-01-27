@@ -88,6 +88,10 @@ function badgermct_harvest_page() {
     include 'manage_harvest.php';
 }
 
+function badgermtc_substrate_page() {
+    include 'manage_substrate.php';
+}
+
 function badgermct_vendors_page() {
     include 'vendors.php';
 }
