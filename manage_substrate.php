@@ -16,7 +16,14 @@
             "substrate_num" => NULL,
             "substrate_type" => $_POST['substrate_type'],
             "cult_num" => $_POST['cult_num'],
-            "inoc_date" => $_POST['inoc_date']
+            "inoc_date" => $_POST['inoc_date'],
+            "mush_type" => $_POST['mush_type'],
+            "grain_num" => $_POST['grain_num'],
+            "fruit_date" => $_POST['fruit_date'],
+            "first_fruit_weight" => $_POST['first_fruit_weight'],
+            "second_fruit_weight" => $_POST['second_fruit_weight'],
+            "third_fruit_weight" => $_POST['third_fruit_weight'],
+            "block_weight" => $_POST['block_weight'],
         ];
         // format
         $format = [NULL,'%s','%s','%s'];
@@ -139,15 +146,18 @@
                 </th>
             </tr>
             <?php
-            #start here next
-            # need to fix query here and also work on posting data.
-            #
-                $substrates = query_substrates($table);
+            $substrates = query_substrates($table);
                 foreach ($substrates as $substrate) {
-                    echo "<tr><th>" . $substrate['substrate_num'] . 
-                        "</th><th>" . $substrate['substrate_type'] . 
+                    echo "<tr><th>" . $substrate['sub_num'] . 
+                        "</th><th>" . $substrate['mush_type'] . 
                         "</th><th>" . $substrate['cult_num'] . 
+                        "</th><th>" . $substrate['grain_num'] .
                         "</th><th>" . $substrate['inoc_date'] .
+                        "</th><th>" . $substrate['fruit_date'] .
+                        "</th><th>" . $substrate['first_fruit_weight'] .
+                        "</th><th>" . $substrate['second_fruit_weight'] .
+                        "</th><th>" . $substrate['third_fruit_weight'] .
+                        "</th><th>" . $substrate['block_weight'] .
                         "</th></tr>";
                 }
             ?>
