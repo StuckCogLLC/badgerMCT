@@ -50,10 +50,10 @@
                         <input type="text" name="cult_num">
                     </th>
                 </tr>
-<!-- mushroom type -->
+<!-- inoculation date -->
                 <tr name="inoculation date" value="2024-01-01">
                     <th>
-                        Inoculation date:
+                        Inoculation Date:
                     </th>
                     <th>
                         <input type="date" name="inoc_date">
@@ -80,7 +80,7 @@
 <!-- block weight -->
                 <tr name="block weight">
                     <th>
-                        Inoculation date:
+                        Block Weight:
                     </th>
                     <th>
                         <input type="text" name="block_weight">
@@ -89,7 +89,7 @@
 <!-- fruiting date -->
                 <tr name="fruiting date" value="2024-01-01">
                     <th>
-                        Inoculation date:
+                    Fruiting Date:
                     </th>
                     <th>
                         <input type="date" name="fruit_date">
@@ -98,7 +98,7 @@
 <!-- first fruit weight -->
                 <tr name="first fruit weight">
                     <th>
-                        First Fruit weight:
+                        First Fruit Weight:
                     </th>
                     <th>
                         <input type="text" name="first_fruit_weight">
@@ -107,7 +107,7 @@
 <!-- second fruit date -->
                 <tr name="second fruit date">
                     <th>
-                        Second frut weight:
+                        Second Fruit Weight:
                     </th>
                     <th>
                         <input type="text" name="second_fruit_weight">
@@ -116,7 +116,7 @@
 <!-- third fruit weight -->
                 <tr name="third fruit weight">
                     <th>
-                        Inoculation date:
+                        Third Fruit Weight:
                     </th>
                     <th>
                         <input type="text" name="third_fruit_weight">
