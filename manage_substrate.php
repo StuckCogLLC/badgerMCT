@@ -13,7 +13,7 @@
     if(isset($_POST['substrate_insert'])){
         // table data
         $data = [
-            "substrate_num" => NULL,
+            "sub_num" => NULL,
             "cult_num" => $_POST['cult_num'],
             "inoc_date" => $_POST['inoc_date'],
             "mush_type" => $_POST['mush_type'],
