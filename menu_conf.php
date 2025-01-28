@@ -5,8 +5,8 @@ $badgermct_menu_slug = 'badgermct_menu';
 
 function badgermct_menu() {
     add_menu_page('badgerMCT', 'badgerMCT', 'moderate_comments', $badgermct_menu_slug, 'badgermct_dashboard_page', '', '', 81);
-    //add_submenu_page($badgermct_menu_slug, 'badgerMCT Dashboard', 'Dashboard', 'moderate_comments', 'badgermct_dashboard', 'badgermct_dashboard_page', 1);
-    add_submenu_page($badgermct_menu_slug, 'Manage Culture', 'Culture', 'moderate_comments', $badgermct_menu_slug, 'badgermct_culture_page', 2);
+    add_submenu_page($badgermct_menu_slug, 'badgerMCT Dashboard', 'Dashboard', 'moderate_comments', 'badgermct_dashboard', 'badgermct_dashboard_page', 1);
+    add_submenu_page($badgermct_menu_slug, 'Manage Culture', 'Culture', 'moderate_comments', 'badgermct_culture', 'badgermct_culture_page', 2);
     add_submenu_page($badgermct_menu_slug, 'Manage Grain', 'Grain', 'moderate_comments', 'badgermct_grain','badgermct_grain_page', 3);
     add_submenu_page($badgermct_menu_slug, 'Mange Substrate', 'Substrate', 'moderate_comments', 'badgermct_substrate', 'badgermct_substrate_page', 4);
     add_submenu_page($badgermct_menu_slug, 'Mange Harvest', 'Harvest', 'moderate_comments', 'badgermct_harvest', 'badgermct_harvest_page', 5);
@@ -72,6 +72,7 @@ function badgermct_substrate() {
         2
     );
 }
+    */
 function badgermct_vendors() {
     add_submenu_page(
         'badgermct_dashboard',
@@ -83,7 +84,6 @@ function badgermct_vendors() {
         2
     );
 }
-    */
 
 // menu pages
 function badgermct_dashboard_page() {
@@ -112,11 +112,9 @@ function badgermct_vendors_page() {
 
 // add menu
 add_action( 'admin_menu', 'badgermct_menu' );
-/*
-add_action( 'admin_menu', 'badgermct_culture' );
-add_action( 'admin_menu', 'badgermct_grain' );
-add_action( 'admin_menu', 'badgermct_substrate' );
-add_action( 'admin_menu', 'badgermct_harvest' );
+//add_action( 'admin_menu', 'badgermct_culture' );
+//add_action( 'admin_menu', 'badgermct_grain' );
+//add_action( 'admin_menu', 'badgermct_substrate' );
+//add_action( 'admin_menu', 'badgermct_harvest' );
 add_action( 'admin_menu', 'badgermct_vendors' );
-*/
 ?>
