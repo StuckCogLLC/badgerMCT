@@ -8,7 +8,7 @@ function badgermct_menu() {
         'badgerMCT Dashboard',
         'badgerMCT',
         'moderate_comments',
-        'badgermct_dashboard',
+        $badgermct_menu_slug,
         'badgermct_dashboard_page',
         '',
         //plugin_dir_url(__FILE__) . 'images/icon_wporg.png',
@@ -54,7 +54,7 @@ function badgermct_culture() {
         'moderate_comments',
         'badgermct_culture',
         'badgermct_culture_page',
-        1
+        2
     );
 }
 function badgermct_grain() {
@@ -65,7 +65,7 @@ function badgermct_grain() {
         'moderate_comments',
         'badgermct_grain',
         'badgermct_grain_page',
-        2
+        3
     );
 }
 function badgermct_harvest() {
@@ -76,7 +76,7 @@ function badgermct_harvest() {
         'moderate_comments',
         'badgermct_harvest',
         'badgermct_harvest_page',
-        4
+        5
     );
 }
 function badgermct_substrate() {
@@ -87,7 +87,7 @@ function badgermct_substrate() {
         'moderate_comments',
         'badgermct_substrate',
         'badgermct_substrate_page',
-        3
+        4
     );
 }
 function badgermct_vendors() {
@@ -98,7 +98,7 @@ function badgermct_vendors() {
         'moderate_comments',
         'badgermct_vendors',
         'badgermct_vendors_page',
-        5
+        6
     );
 }
 
