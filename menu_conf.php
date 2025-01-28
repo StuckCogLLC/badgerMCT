@@ -37,7 +37,6 @@ function badgermct_dashboard() {
         81
     );
 }
-
 function badgermct_culture() {
     add_submenu_page(
         'badgermct_dashboard',
@@ -49,7 +48,6 @@ function badgermct_culture() {
         1
     );
 }
-
 function badgermct_grain() {
     add_submenu_page(
         'badgermct_dashboard',
@@ -61,7 +59,6 @@ function badgermct_grain() {
         2
     );
 }
-
 function badgermct_harvest() {
     add_submenu_page(
         'badgermct_dashboard',
@@ -95,29 +92,23 @@ function badgermct_vendors() {
         2
     );
 }
-*/
 
 // menu pages
 function badgermct_dashboard_page() {
     include 'dashboard.php';
 }
-
 function badgermct_culture_page() {
     include 'manage_culture.php';
 }
-
 function badgermct_grain_page() {
     include 'manage_grain.php';
 }
-
 function badgermct_harvest_page() {
     include 'manage_harvest.php';
 }
-
 function badgermct_substrate_page() {
     include 'manage_substrate.php';
 }
-
 function badgermct_vendors_page() {
     include 'vendors.php';
 }
