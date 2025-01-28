@@ -16,7 +16,7 @@ function badgermct_menu() {
     );
 }
 function badgermct_dashboard() { 
-    add_submenu_page($badgermct_menu_slug, 'Dashboard', 'Dashboard', 'moderate_comments', $badgermct_menu_slug, 'badgermct_dashboard_page', 1);
+    add_submenu_page('badgermct_dashboard', 'Dashboard', 'Dashboard', 'moderate_comments', 'badgermct_dashboard', 'badgermct_dashboard_page', 1);
 }
 /*function badgermct_culture() {
     add_submenu_page($badgermct_menu_slug, 'Manage Culture', 'Culture', 'moderate_comments', 'badgermct_culture', 'badgermct_culture_page', 2);
