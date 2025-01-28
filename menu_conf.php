@@ -4,7 +4,7 @@
 $badgermct_menu_slug = 'badgermct_menu';
 
 function badgermct_menu() {
-        add_menu_page('badgerMCT Dashboard', 'badgerMCT', 'moderate_comments', 'badgermct_dashboard', 'badgermct_dashboard_page', 81);
+        add_menu_page('badgerMCT Dashboard', 'badgerMCT', 'moderate_comments', 'badgermct_dashboard', 'badgermct_dashboard_page', '', 81);
 }
 function badgermct_dashboard() { 
     add_submenu_page('badgermct_dashboard', 'Dashboard', 'Dashboard', 'moderate_comments', 'badgermct_dashboard', 'badgermct_dashboard_page', 1);
