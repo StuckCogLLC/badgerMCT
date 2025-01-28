@@ -1,7 +1,7 @@
 <?php
 // menu page call
 
-$badgermct_menu_slug = 'badgermct_menu'
+$badgermct_menu_slug = 'badgermct_menu';
 
 function badgermct_menu() {
     add_menu_page('badgerMCT Dashboard', 'badgerMCT', 'moderate_comments', $badgermct_menu_slug, 'badgermct_dashboard_page', '', '', 81);
