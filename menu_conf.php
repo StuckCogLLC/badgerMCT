@@ -8,7 +8,7 @@ function badgermct_menu() {
         'badgerMCT Dashboard',
         'badgerMCT',
         'moderate_comments',
-        $badgermct_menu_slug,
+        'badgermct_dashboard',
         'badgermct_dashboard_page',
         '',
         //plugin_dir_url(__FILE__) . 'images/icon_wporg.png',
