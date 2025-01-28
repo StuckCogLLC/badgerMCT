@@ -3,10 +3,10 @@
 
 $badgermct_menu_slug = 'badgermct_menu';
 
-function badgermct_menu() {
+/*function badgermct_menu() {
     add_menu_page('badgerMCT', 'badgerMCT', 'moderate_comments', $badgermct_menu_slug, 'badgermct_dashboard_page', '', 81);
 }
-/*function badgermct_dashboard() { 
+function badgermct_dashboard() { 
     add_submenu_page($badgermct_menu_slug, 'Dashboard', 'Dashboard', 'moderate_comments', $badgermct_menu_slug, 'badgermct_dashboard_page', 1);
 }
 function badgermct_culture() {
@@ -123,7 +123,7 @@ function badgermct_vendors_page() {
 }
 
 // add menu
-add_action( 'admin_menu', 'badgermct_menu' );
+//add_action( 'admin_menu', 'badgermct_menu' );
 add_action( 'admin_menu', 'badgermct_dashboard' );
 add_action( 'admin_menu', 'badgermct_culture' );
 add_action( 'admin_menu', 'badgermct_grain' );
