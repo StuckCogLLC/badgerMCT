@@ -3,10 +3,19 @@
 
 $badgermct_menu_slug = 'badgermct_menu';
 
-/*function badgermct_menu() {
-    add_menu_page('badgerMCT', 'badgerMCT', 'moderate_comments', $badgermct_menu_slug, 'badgermct_dashboard_page', '', 81);
+function badgermct_menu() {
+        add_menu_page(
+        'badgerMCT Dashboard',
+        'badgerMCT',
+        'moderate_comments',
+        'badgermct_dashboard',
+        'badgermct_dashboard_page',
+        '',
+        //plugin_dir_url(__FILE__) . 'images/icon_wporg.png',
+        81
+    );
 }
-function badgermct_dashboard() { 
+/*function badgermct_dashboard() { 
     add_submenu_page($badgermct_menu_slug, 'Dashboard', 'Dashboard', 'moderate_comments', $badgermct_menu_slug, 'badgermct_dashboard_page', 1);
 }
 function badgermct_culture() {
@@ -24,7 +33,7 @@ function badgermct_harvest() {
 function badgermct_vendors() {
     add_submenu_page($badgermct_menu_slug, 'Manage Vendors', 'Vendors', 'moderate_comments', 'badgermct_vendors', 'badgermct_vendors_page', 6);
 }*/
-
+/*
 function badgermct_dashboard() {
     add_menu_page(
         'badgerMCT Dashboard',
@@ -36,7 +45,7 @@ function badgermct_dashboard() {
         //plugin_dir_url(__FILE__) . 'images/icon_wporg.png',
         81
     );
-}
+}*/
 function badgermct_culture() {
     add_submenu_page(
         'badgermct_dashboard',
@@ -114,8 +123,8 @@ function badgermct_vendors_page() {
 }
 
 // add menu
-//add_action( 'admin_menu', 'badgermct_menu' );
-add_action( 'admin_menu', 'badgermct_dashboard' );
+add_action( 'admin_menu', 'badgermct_menu' );
+//add_action( 'admin_menu', 'badgermct_dashboard' );
 add_action( 'admin_menu', 'badgermct_culture' );
 add_action( 'admin_menu', 'badgermct_grain' );
 add_action( 'admin_menu', 'badgermct_substrate' );
