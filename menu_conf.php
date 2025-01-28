@@ -67,7 +67,7 @@ function badgermct_harvest() {
         'moderate_comments',
         'badgermct_harvest',
         'badgermct_harvest_page',
-        2
+        4
     );
 }
 function badgermct_substrate() {
@@ -78,7 +78,7 @@ function badgermct_substrate() {
         'moderate_comments',
         'badgermct_substrate',
         'badgermct_substrate_page',
-        2
+        3
     );
 }
 function badgermct_vendors() {
@@ -89,7 +89,7 @@ function badgermct_vendors() {
         'moderate_comments',
         'badgermct_vendors',
         'badgermct_vendors_page',
-        2
+        5
     );
 }
 
