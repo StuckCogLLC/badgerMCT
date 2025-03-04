@@ -1,0 +1,37 @@
+###############
+# Data Tables #
+###############
+
+# used for ordered or banked culturs
+- name: culture_bank
+  table columns:
+    - cult_num
+    - mush_type
+    - cult_type
+    - date_added
+    - origin
+    - origin_lot_number
+# used for substrate innoculation
+- name: inoc_culture
+  table columns:
+    - inoc_cult_num
+    - medium_type
+    - cult_num
+    - inoc_date
+# substrate for fruiting
+- name: substrate
+  table columns:
+    - sub_num
+    - inoc_cult_num
+    - inoc_date
+    - mush_type
+    - fruit_date
+    - block_weight
+# fruit data
+- name: harvest
+  table columns:
+    - harvest_num
+    - sub_num
+    - harvest_date
+    - harvest_weight
+    - waste_weight
