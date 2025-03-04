@@ -6,7 +6,7 @@ function badgermct_menu() {
     // dashboard page - same slug as main menu for name overide
     add_submenu_page('badgermct_dashboard', 'Dashboard', 'Dashboard', 'moderate_comments', 'badgermct_dashboard', 'badgermct_dashboard_page', 1);
     // culture page
-    add_submenu_page('badgermct_dashboard', 'Manage Culture', 'Culture', 'moderate_comments', 'badgermct_culture', 'badgermct_culture_page', 2);
+    add_submenu_page('badgermct_dashboard', 'Manage Culture Bank', 'Culture Bank', 'moderate_comments', 'badgermct_culture_bank', 'badgermct_culture_bank_page', 2);
     // grain page
     add_submenu_page('badgermct_dashboard', 'Manage Grain', 'Grain', 'moderate_comments', 'badgermct_grain','badgermct_grain_page', 3);
     // substrate page
@@ -21,7 +21,7 @@ function badgermct_menu() {
 function badgermct_dashboard_page() {
     include 'dashboard.php';
 }
-function badgermct_culture_page() {
+function badgermct_culture_bank_page() {
     include 'manage_culture.php';
 }
 function badgermct_grain_page() {

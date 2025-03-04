@@ -1,6 +1,6 @@
 <?php
     global $wpdb;
-    $table = $wpdb->prefix . 'badgerMCT_cultures';
+    $table = $wpdb->prefix . 'badgerMCT_culture_bank';
 
     // query culture table
     function query_cultures($table) {
@@ -18,9 +18,9 @@
             "cult_num" => NULL,
             "mush_type" => $_POST['mush_type'],
             "cult_type" => $_POST['cult_type'],
-            "date_added" => $_POST['received_date'],
-            "vendor" => $_POST['vendor'],
-            "ven_lot_num" => $_POST['ven_lot_num']
+            "date_added" => $_POST['date_added'],
+            "origin" => $_POST['origin'],
+            "origin_lot_number" => $_POST['origin_lot_number']
         ];
         // format
         $format = [NULL,'%s','%s','%s','%s','%s'];
@@ -59,23 +59,23 @@
                         Date:
                     </th>
                     <th>
-                        <input type="date" name="received_date">
+                        <input type="date" name="date_added">
                     </th>
                 </tr>
-                <tr name="Vendor">
+                <tr name="Origin">
                     <th>
-                        Vendor:
+                        Origin:
                     </th>
                     <th>
-                        <input type="text" name="vendor">
+                        <input type="text" name="origin">
                     </th>
                 </tr>
-                <tr name="Vendor Lot Number">
+                <tr name="Origin Lot Number">
                     <th>
                         Vendor Lot Number:
                     </th>
                     <th>
-                        <input type="text" name="ven_lot_num">
+                        <input type="text" name="origin_lot_number">
                     </th>
                 </tr>
             </tbody>
@@ -96,7 +96,7 @@
                     Type
                 </th>
                 <th style=width:10%>
-                    Mushroom
+                    Mushroom Type
                 </th>
                 <th style=width:10%>
                     Date
@@ -115,8 +115,8 @@
                         "</th><th>" . $culture['cult_type'] . 
                         "</th><th>" . $culture['mush_type'] . 
                         "</th><th>" . $culture['date_added'] . 
-                        "</th><th>" . $culture['vendor'] . 
-                        "</th><th>" . $culture['ven_lot_num'] . 
+                        "</th><th>" . $culture['origin'] . 
+                        "</th><th>" . $culture['origin_lot_number'] . 
                         "</th></tr>";
                 }
             ?>
