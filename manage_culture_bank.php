@@ -72,7 +72,7 @@
                 </tr>
                 <tr name="Origin Lot Number">
                     <th>
-                        Vendor Lot Number:
+                        Origin Lot Number:
                     </th>
                     <th>
                         <input type="text" name="origin_lot_number">
@@ -93,7 +93,7 @@
                     ID
                 </th>
                 <th style=width:10%>
-                    Type
+                    Culture Type
                 </th>
                 <th style=width:10%>
                     Mushroom Type
@@ -102,10 +102,10 @@
                     Date
                 </th>
                 <th style=width:10%>
-                    Vendor
+                    Origin
                 </th>
                 <th style=width:10%>
-                    Vendor Lot
+                    Origin Lot
                 </th>
             </tr>
             <?php
