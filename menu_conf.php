@@ -8,7 +8,7 @@ function badgermct_menu() {
     // culture page
     add_submenu_page('badgermct_dashboard', 'Manage Culture Bank', 'Culture Bank', 'moderate_comments', 'badgermct_culture_bank', 'badgermct_culture_bank_page', 2);
     // grain page
-    add_submenu_page('badgermct_dashboard', 'Manage Grain', 'Grain', 'moderate_comments', 'badgermct_grain','badgermct_grain_page', 3);
+    add_submenu_page('badgermct_dashboard', 'Manage Inoc Culture', 'Inoc Cultures', 'moderate_comments', 'badgermct_inoc_culture','badgermct_inoc_culture_page', 3);
     // substrate page
     add_submenu_page('badgermct_dashboard', 'Mange Substrate', 'Substrate', 'moderate_comments', 'badgermct_substrate', 'badgermct_substrate_page', 4);
     // harvest page
@@ -25,7 +25,7 @@ function badgermct_culture_bank_page() {
     include 'manage_culture_bank.php';
 }
 function badgermct_grain_page() {
-    include 'manage_grain.php';
+    include 'manage_inoc_culture.php';
 }
 function badgermct_harvest_page() {
     include 'manage_harvest.php';

@@ -23,7 +23,7 @@ function create_tables() {
     /* culture bank */
     $table_badgerMCT_culture_bank = $wpdb->prefix . 'badgerMCT_culture_bank';
     /* inoculated cultures */
-    $table_badgerMCT_inoc_culture = $wpdb->prefix . 'badgerMCT_grain';
+    $table_badgerMCT_inoc_culture = $wpdb->prefix . 'badgerMCT_inoc_culture';
     /* inoculated substrate */
     $table_badgerMCT_substrate = $wpdb->prefix . 'badgerMCT_substrate';
     /* harvested mushrooms */
