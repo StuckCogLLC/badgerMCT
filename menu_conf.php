@@ -22,7 +22,7 @@ function badgermct_dashboard_page() {
     include 'dashboard.php';
 }
 function badgermct_culture_bank_page() {
-    include 'manage_culture.php';
+    include 'manage_culture_bank.php';
 }
 function badgermct_grain_page() {
     include 'manage_grain.php';
